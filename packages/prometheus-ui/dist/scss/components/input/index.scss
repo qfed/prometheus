@@ -1,0 +1,153 @@
+@import '../../base';
+@import '../list/index.scss';
+
+.#{$pre}-input {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  &.#{$pre}-list-line {
+    font-size: 32px;
+    color: #333;
+    height: 100px;
+    line-height: 100px;
+  }
+  &__label {
+    margin-right: 35px;
+    min-width: 130px;
+    display: flex;
+
+    &__text {
+      height: 100px;
+      line-height: 102px;
+    }
+
+    &__thumb {
+      display: flex;
+      align-items: center;
+    }
+
+    &--disabled{
+      color: #333;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 25px 0;
+
+    &__input {
+      width: 100%;
+      height: 48px;
+      line-height: 48px;
+      flex: 1;
+
+      &--right {
+        text-align: right;
+      }
+
+      &--disabled {
+        color: #333;
+        -webkit-text-fill-color: #333;
+        opacity: 1;
+        -webkit-opacity: 1;
+        
+        &::-webkit-input-placeholder { /* WebKit browsers */
+          color: $font-color-sm-x;
+          -webkit-text-fill-color: $font-color-sm-x;
+        }
+      }
+    }
+
+    &__textarea {
+      width: 100%;
+      height: 100px;
+      line-height: 46px;
+      resize: none;
+
+      &--right {
+        text-align: right;
+      }
+      
+      &--disabled{
+        color: #333;
+        -webkit-text-fill-color: #333;
+        opacity: 1;
+        -webkit-opacity: 1;
+
+        &::-webkit-input-placeholder { /* WebKit browsers */
+          color: $font-color-sm-x;
+          -webkit-text-fill-color: $font-color-sm-x;
+        }
+      }
+    }
+
+    &__close {
+      margin-left: 20px;
+      font-size: 32px;
+      color: $font-color-sm-x;
+    }
+  }
+  
+  &__extra{
+    &--disabled{
+      color: #333;
+    }
+  }
+
+  &__arrow {
+    color: $font-color-sm-x;
+    margin-left: 15px;
+  }
+
+  /* 段落部分 - start */
+  &__textarea {
+    width: 100%;
+    height: 120px;
+    resize: none;
+    font-size: 28px;
+    line-height: 42px;   
+    
+    &--disabled{
+      color: #333;
+      -webkit-text-fill-color: #333;
+      opacity: 1;
+      -webkit-opacity: 1;
+
+      &::-webkit-input-placeholder { /* WebKit browsers */
+        color: $font-color-sm-x;
+        -webkit-text-fill-color: $font-color-sm-x;
+      }
+    }
+  }
+
+  &__words {
+    font-size: 24px;
+    line-height: 36px;
+    text-align: right;
+    color: $font-color-sm-x;
+
+    &__tip {
+      margin-right: 20px;
+      color: #f4333c;
+    }
+  }
+  /* 段落部分 - end */
+
+  // 折行修饰
+  &--more.#{$pre}-list-line {
+    height: auto;
+    align-items: baseline;
+  }
+
+  // 段落修饰
+  &--textarea {
+    height: auto;
+    display: flex;
+    padding: 30px 0 30px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}

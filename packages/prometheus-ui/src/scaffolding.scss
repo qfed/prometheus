@@ -1,0 +1,52 @@
+﻿//
+// Scaffolding
+// --------------------------------------------------
+
+// Reset the box-sizing
+//
+// Heads up! This reset may cause conflicts with some third-party widgets.
+// For recommendations on resolving such conflicts, see
+// http://getbootstrap.com/getting-started/#third-box-sizing
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+// Body reset
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: 100%;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  background-color: $body-bg;
+  height: 100%;
+}
+
+img {
+  vertical-align: middle;
+}
+
+// 重置input全局样式
+input,
+textarea {
+  outline: none;
+  border: none;
+  &::-webkit-input-placeholder {
+    color: $font-color-sm-x;
+  }
+
+  &:disabled{
+    background: transparent;
+  }
+}
+

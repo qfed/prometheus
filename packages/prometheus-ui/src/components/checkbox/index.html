@@ -1,0 +1,74 @@
+{{extend '../_layout.art'}}
+
+{{block 'content'}}
+
+<q-demo class="pro-demo--radio">
+  <div class="pro-list">
+    <div class="pro-list__hd">checkbox demo </div>
+    <div class="pro-list__bd">
+      <div class="pro-list-line pro-checkbox">
+        <div class="pro-list-line__bd">checkbox在右边未选中</div>
+        <div class="pro-list-line__ft pro-checkbox__icon">
+          <label class="pro-checkbox__icon__label">checkbox在右边未选中</label>
+          <input class="pro-checkbox__icon__input" type="checkbox" checked />
+          <i class="iconfont icon-selectUp pro-checkbox__icon" style='font-size: 18px'></i>
+        </div>
+      </div>
+      <div class="pro-list-line pro-checkbox pro-checkbox--checked">
+        <div class="pro-list-line__bd">checkbox在右边选中</div>
+        <div class="pro-list-line__ft pro-checkbox__icon">
+          <label class="pro-checkbox__icon__label">checkbox在右边选中</label>
+          <input class="pro-checkbox__icon__input" type="checkbox" checked/>
+          <i class="iconfont icon-success pro-checkbox__icon" style='font-size: 18px'></i>
+        </div>
+      </div>
+      <div class="pro-list-line pro-checkbox">
+        <div class="pro-list-line__hd pro-checkbox__icon">
+          <label class="pro-checkbox__icon__label">checkbox在左边未选中</label>
+          <input class="pro-checkbox__icon__input" type="checkbox" />
+          <i class="iconfont icon-selectUp pro-checkbox__icon" style='font-size: 18px'></i>
+        </div>
+        <div class="pro-list-line__bd">checkbox在左边未选中</div>
+      </div>
+      <div class="pro-list-line pro-checkbox pro-checkbox--checked">
+        <div class="pro-list-line__hd pro-checkbox__icon">
+          <label class="pro-checkbox__icon__label">checkbox在左边选中</label>
+          <input class="pro-checkbox__icon__input" type="checkbox" checked/>
+          <i class="iconfont icon-success pro-checkbox__icon" style='font-size: 18px'></i>
+        </div>
+        <div class="pro-list-line__bd">checkbox在左边选中</div>
+      </div>
+
+      <div class="pro-list-line pro-checkbox pro-checkbox--checked pro-checkbox--disabled">
+        <div class="pro-list-line__bd">checkbox在右边选中</div>
+        <div class="pro-list-line__ft pro-checkbox__icon">
+          <label class="pro-checkbox__icon__label">checkbox在右边选中</label>
+          <input class="pro-checkbox__icon__input" type="checkbox" checked/>
+          <i class="iconfont icon-success pro-checkbox__icon" style='font-size: 18px'></i>
+        </div>
+      </div>
+
+      <div class="pro-list-line pro-checkbox pro-checkbox--checked pro-checkbox--disabled">
+        <div class="pro-list-line__hd pro-checkbox__icon">
+          <label class="pro-checkbox__icon__label">checkbox在左边选中</label>
+          <input class="pro-checkbox__icon__input" type="checkbox" checked/>
+          <i class="iconfont icon-success pro-checkbox__icon" style='font-size: 18px'></i>
+        </div>
+        <div class="pro-list-line__bd">checkbox在左边选中</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pro-list">
+    <div class="pro-list__hd">多项筛选</div>
+    <div class="pro-tag-group">
+      <div class="pro-tag selected">选项卡一</div>
+      <div class="pro-tag">选项卡二</div>
+      <div class="pro-tag">选项卡三</div>
+      <div class="pro-tag selected">选项卡四</div>
+      <div class="pro-tag">选项卡五</div>
+    </div>
+  </div>
+</q-demo>
+
+{{/block}}

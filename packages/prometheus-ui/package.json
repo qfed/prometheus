@@ -1,0 +1,92 @@
+{
+  "name": "@qfed/prometheus-ui",
+  "version": "1.1.13",
+  "description": "q-ui",
+  "private": false,
+  "main": "dist",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doc:watch": "node bin/doc-watch.js & vuepress dev docs",
+    "doc:dev": "node bin/doc-pre.js && npm run doc:watch",
+    "doc:build": "node bin/doc-pre.js && vuepress build docs",
+    "deploy": "npm run doc:build",
+    "doc:start": "npm run deploy && node ./bin/doc-start.js",
+    "build": "cross-env NODE_ENV=development node bin/build.js && cross-env NODE_ENV=development gulp",
+    "build:prod": "cross-env NODE_ENV=development node bin/build.js && cross-env NODE_ENV=production gulp",
+    "dev": "nodemon ./node_modules/.bin/gulp start",
+    "start": "gulp start --silent",
+    "theme": "npm run build:prod   && git add .&& git commit -m \"update dist\" &&  git push && cd ../q-react &&yarn add git+ssh://git@git.qufenqi.com:fe/q-ui.git#fix_input-style -D && cd ../q-ui"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/advence-liz/blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/advence-liz/blog/issues"
+  },
+  "homepage": "https://github.com/advence-liz/blog#readme",
+  "nodemonConfig": {
+    "watch": [
+      ".qsrc.json",
+      "gulpfile.js",
+      "gulp/**",
+      "package.json",
+      "src/components/_layout.art"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "art-template": "^4.13.2",
+    "autoprefixer": "^8.6.3",
+    "babel-eslint": "^8.2.3",
+    "browser-sync": "^2.24.4",
+    "chalk": "^2.4.1",
+    "chokidar": "^2.0.4",
+    "cross-env": "^5.2.0",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "fs-extra": "^6.0.1",
+    "gh-pages": "^1.1.0",
+    "glob": "^7.1.2",
+    "gulp": "^4.0.0",
+    "gulp-base64": "^0.1.3",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-cli": "^2.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-less": "^3.5.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.3.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-template": "^5.0.0",
+    "gulp.spritesmith": "^6.9.0",
+    "js-beautify": "^1.7.5",
+    "koa": "^2.5.1",
+    "koa-static": "^4.0.3",
+    "lazypipe": "^1.0.1",
+    "lodash": "^4.17.10",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.18.9",
+    "postcss-pxtorem": "^4.0.1",
+    "progress": "^2.0.0",
+    "pxtowhatever": "^1.0.0",
+    "replace-ext": "^1.0.0",
+    "require-dir": "^1.0.0",
+    "sass-loader": "^7.1.0",
+    "shelljs": "^0.8.2",
+    "through2": "^3.0.0",
+    "vuepress": "^0.14.0",
+    "yargs": "^11.0.0"
+  }
+}

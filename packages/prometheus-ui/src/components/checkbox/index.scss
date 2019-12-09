@@ -1,0 +1,31 @@
+@import '../../base';
+@import '../list/index.scss';
+@import '../tag/index.scss';
+.#{$pre}-checkbox {
+  position: relative;
+  &__icon {
+    color: $brand-primary;
+
+    &__label {
+      display: none;
+    }
+    &__input {
+      display: none;
+    }
+  }
+
+  &--checked {
+    .#{$pre}-checkbox__icon {
+      color: $brand-primary;
+    }
+  }
+
+  &--disabled {
+    .#{$pre}-list-line__bd {
+      color: #CCCCCC;
+    }
+    .#{$pre}-checkbox__icon {
+      color: #CCCCCC;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import '../../base';
+@import '../list/index.scss';
+@import '../tag/index.scss';
+
+.#{$pre}-radio{
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100px;
+  line-height: 100px;
+
+  &__pic{
+    display: flex;
+    align-items: center;
+
+    &--default{
+      width: 40px;
+      height: 40px;
+      background: $brand-primary;
+      margin-right: 20px;
+    }
+
+    &--disabled{
+      color: $font-color-sm-x;
+    }
+  }
+
+  &__text{
+    flex: 1;
+    font-size: 32px;
+    color: #333;
+
+    &--disabled{
+      color: $font-color-sm-x;
+    }
+  }
+
+  &__control{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+
+  
+  &__pick-icon{
+    visibility: hidden;
+    
+    &--default{
+      color: $brand-primary;
+    }
+
+    &--disabled{
+      color: $font-color-sm-x;
+    }
+  }
+
+  // 重点
+  &__control:checked ~ &__pick-icon{
+    visibility: visible;
+  }
+}

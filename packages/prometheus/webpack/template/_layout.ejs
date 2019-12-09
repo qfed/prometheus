@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{set options = htmlWebpackPlugin.options}}
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <base target="_blank" /> -->
+    <link rel="stylesheet" href="http://qui.qufenqi.com/css/index.css" />
+    <title>{{ options.title }}</title>
+  </head>
+  <style>
+    body {
+      background-color: #f5f3f3;
+    }
+    #root {
+      margin: 20px 20px;
+      font-weight: bold;
+      color: #fa6c41;
+    }
+    ul {
+      list-style-type: none;
+      padding-inline-start: 0px;
+      background-color: #fff;
+    }
+    li {
+      padding: 3px 0px;
+    }
+    a {
+      text-decoration: none;
+      display: inline-block;
+      width: 100%;
+    }
+    a:link {
+      color: black;
+    }
+    a:visited {
+      color: black;
+    }
+    a:hover {
+      text-decoration: underline;
+      font-weight: bold;
+      color: grey;
+    }
+    a:active {
+      color: #fa6c41;
+    }
+    .list-item {
+      margin: 0px 30px;
+      padding: 5px 0px;
+    }
+
+    i {
+      position: absolute;
+      right: 15px;
+    }
+    .dividing-line {
+      height: 1px;
+      width: 100%;
+      background-color: #f5f3f3;
+    }
+  </style>
+  <body>
+    <div id="root" class="h1">组件列表</div>
+    <ul class="bs-docs-sidenav">
+      {{each options.data}}
+
+      <div class="list-item h2">
+        <li>
+          <a href="{{ $value.path }}.html"
+            >{{ $value.name }}<i class="icon  icon-jiantouyou"></i
+          ></a>
+        </li>
+      </div>
+      <div class="dividing-line"></div>
+
+      {{/each}}
+    </ul>
+  </body>
+</html>

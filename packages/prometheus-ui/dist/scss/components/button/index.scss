@@ -1,0 +1,409 @@
+@import '../../base';
+@import '../loading/index.scss';
+
+/**
+ * 圆角混合
+ * @height 传入的元素高度数值、高度百分比
+ * 
+ */
+@mixin round-cor-top-left($height: 50%) {
+  border-top-left-radius: $height;
+}
+
+@mixin round-cor-top-right($height: 50%) {
+  border-top-right-radius: $height;
+}
+
+@mixin round-cor-bottom-left($height: 50%) {
+  border-bottom-left-radius: $height;
+}
+
+@mixin round-cor-bottom-right($height: 50%) {
+  border-bottom-right-radius: $height;
+}
+
+@mixin round-cor($height: 100%) {
+  @include round-cor-top-left($height * 0.5);
+  @include round-cor-top-right($height * 0.5);
+  @include round-cor-bottom-left($height * 0.5);
+  @include round-cor-bottom-right($height * 0.5);
+}
+
+/* 基本变量 */
+
+// 尺寸高度
+$btn-height: 100px;
+$btn-height-medium: 100px;
+$btn-height-small: 60px;
+$btn-height-mini: 50px;
+$btn-height-line: 130px;
+
+// 颜色
+// @bg-primary: $brand-primary;
+$bg-primary: $brand-primary;
+$bg-default: #cccccc;
+$bg-danger: #f4333c;
+$bg-danger--active: #333333;
+// 字号
+$font-size: 36px;
+$font-size-medium: 36px;
+$font-size-small: 28px;
+$font-size-mini: 24px;
+
+
+/* mixins */
+@mixin line-height($height) {
+  line-height: $height;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.btn-padding {
+  padding: 0 23px;
+}
+
+.btn-margin {
+  margin: 0 5px;
+}
+
+@mixin sub-text-font-size($height, $font-size) {
+  &--more-content {
+    height: $btn-height-line;
+    .#{$pre}-btn__content {
+      height: 100%;
+      line-height: $font-size;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* 主内容 */
+      .content_text {
+        font-size: 36px;
+        line-height: 54px;
+      }
+      /* 副内容 */
+      .content_sub-text {
+        font-size: 24px;
+        line-height: 36px;
+      }
+    }
+    .#{$pre}-btn__loading {
+      zoom: 1;
+    }
+  }
+}
+
+.#{$pre}-btn {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  white-space: nowrap;
+  @extend .btn-padding;
+
+  @include sub-text-font-size($btn-height, $font-size);
+  border-radius: $btn-border-radius;
+
+  /* 形状 */
+  &--round {
+    @include round-cor(10px);
+  }
+
+  &--pill {
+    @include round-cor($btn-height-line);
+  }
+
+  /* 效果 */
+  &--air {
+    box-shadow: 0 4px 6px 0.6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.1s ease-in-out;
+    &:active,
+    &.#{$pre}-btn--disabled {
+      box-shadow: none;
+    }
+  }
+
+  /* 大小 */
+  &,
+  &--big {
+    height: $btn-height;
+    font-size: $font-size;
+    @include line-height($btn-height);
+  }
+
+  &--medium {
+    @extend .inline-block;
+    // @include btn-padding;
+    @extend .btn-padding;
+    @include line-height($btn-height);
+    @include sub-text-font-size($btn-height, $font-size-medium);
+    max-width: 530px;
+    width: 530px;
+    height: $btn-height;
+    font-size: $font-size-medium;
+  }
+
+  &--small {
+    // @include inline-block;
+    // @include btn-padding;
+    @extend .inline-block;
+    @extend .btn-padding;
+    @extend .btn-margin;
+    @include line-height($btn-height-small);
+    @include sub-text-font-size($btn-height-small, $font-size-small);
+    max-width: 140px;
+    width: 140px;
+    height: $btn-height-small;
+    font-size: $font-size-small;
+    padding: 0;
+    .#{$pre}-btn__loading {
+      zoom: 0.4;
+      margin-right: 5px;
+    }
+  }
+
+  &--mini {
+    // @include inline-block;
+    // @include btn-padding;
+    @extend .inline-block;
+    @extend .btn-padding;
+    // @include btn-margin;
+    @extend .btn-margin;
+    @include line-height($btn-height-mini);
+    @include sub-text-font-size($btn-height-mini, $font-size-mini);
+    max-width: 130px;
+    width: 130px;
+    height: $btn-height-mini;
+    font-size: $font-size-mini;
+    padding: 0;
+    .#{$pre}-btn__loading {
+      zoom: 0.35;
+      margin-right: 5px;
+    }
+  }
+
+  &--more-content {
+    height: $btn-height-line;
+  }
+
+  /* 类别 */
+  &--primary {
+    color: #ffffff;
+    // background-color: $brand-primary;
+    background-color: $brand-primary;
+
+    &:active {
+      color: rgba(255, 255, 255, 0.5);
+      background-color: darken($brand-primary, 3%);
+      opacity: 1;
+    }
+
+    &.#{$pre}-btn--press {
+      color: rgba(255, 255, 255, 0.5);
+      background-color: darken($brand-primary, 3%);
+      cursor: not-allowed;
+    }
+
+    &.#{$pre}-btn--disabled {
+      background-color: $brand-primary;
+      color: #ffffff;
+      opacity: 0.5;
+      cursor: not-allowed;
+      &.#{$pre}-btn--medium,
+      &.#{$pre}-btn--mini,
+      &.#{$pre}-btn--small {
+        background-color: #cccccc;
+        color: #999999;
+        border-color: #979797;
+        opacity: 1;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &--bottom {
+    color: #ffffff;
+    background-color: $brand-primary;
+
+    &:active {
+      color: rgba(255, 255, 255, 0.5);
+      background-color: darken($brand-primary, 3%);
+    }
+
+    &.#{$pre}-btn--press {
+      color: rgba(255, 255, 255, 0.5);
+      background-color: darken($brand-primary, 3%);
+      cursor: not-allowed;
+    }
+
+    &.#{$pre}-btn--disabled {
+      background-color: #cccccc;
+      color: #999999;
+      cursor: not-allowed;
+    }
+  }
+
+  /* 默认 */
+  &--default {
+    color: $font-color-primary;
+    color: $brand-primary;
+    background-color: #ffffff;
+    border: 1px solid $brand-primary;
+
+    &:active {
+      // color: lighten($brand-primary, 3%);
+      // background-color: #ffffff;
+      // border-color: lighten($brand-primary, 3%);
+      opacity: 0.5;
+    }
+
+    &.#{$pre}-btn--press {
+      opacity: 0.5;
+    }
+
+    &.#{$pre}-btn--disabled {
+      color: #999999;
+      background-color: #cccccc;
+      border-color: transparent;
+      opacity: 1;
+      cursor: not-allowed;
+      &.#{$pre}-btn--medium,
+      &.#{$pre}-btn--mini,
+      &.#{$pre}-btn--small {
+        color: #999999;
+        border-color: #cccccc;
+        background-color: #fff;
+        cursor: not-allowed;
+        // &:active {
+        //   background-color: #ffffff;
+        //   border-color: #999999;
+        // }
+      }
+
+      // &:active {
+      //   color: #999999;
+      //   background-color: #cccccc;
+      //   border-color: transparent;
+      // }
+    }
+    .#{$pre}-btn__loading__item::before {
+      background-color: $brand-primary;
+    }
+  }
+
+  &--danger {
+    color: #ffffff;
+    background-color: $bg-danger;
+
+    &:active {
+      color: rgba(255, 255, 255, 0.5);
+      background-color: $bg-danger--active;
+    }
+
+    &.#{$pre}-btn--disabled {
+      color: #ffffff;
+      background-color: $bg-danger;
+      opacity: 0.5;
+      cursor: not-allowed;
+      &:active {
+      }
+    }
+    &.#{$pre}-btn--press {
+      color: rgba(255, 255, 255, 0.5);
+      background-color: $bg-danger--active;
+    }
+    .#{$pre}-btn__loading__item::before {
+      background-color: #ffffff;
+    }
+  }
+
+  &--loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .#{$pre}-loading {
+      margin-bottom: 0;
+    }
+  }
+
+  /* H5 cursor */
+  cursor: pointer;
+  
+  &__loading {
+    zoom: 0.75;
+    margin: 0 10px 0 0;
+    &__item::before {
+      background-color: #ffffff;
+    }
+  }
+}
+.#{$pre}-bottom-group {
+  display: flex;
+  width: 100%;
+  height: $btn-height;
+  font-size: $font-size;
+  &__item {
+    flex: 1;
+    padding: 0;
+    border-top: 1px solid #eeeeee;
+    color: #999999;
+    &:active {
+      opacity: 0.5;
+    }
+    &__text {
+      font-size: 20px;
+      color: #999999;
+      line-height: 30px;
+      margin-top: 2px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    &.#{$pre}-btn--default {
+      @extend .#{$pre}-btn--default;
+    }
+    &.#{$pre}-bottom--third {
+      flex: 1;
+    }
+    &.#{$pre}-bottom--half {
+      flex: 1;
+      margin: 0 10px;
+    }
+    &.#{$pre}-bottom-group__main {
+      @extend .#{$pre}-btn--primary;
+      border: none;
+      flex: auto;
+      &--small {
+        width: 420px;
+      }
+      &--medium {
+        width: 430px;
+      }
+      &--large {
+        width: 590px;
+      }
+      &.#{$pre}-btn--disabled {
+        @extend .#{$pre}-btn--bottom;
+      }
+      &.#{$pre}-bottom--third {
+        flex: 2;
+      }
+      &.#{$pre}-bottom--half {
+        flex: 1;
+        margin: 0 10px;
+      }
+    }
+  }
+  .#{$pre}-btn {
+    border-radius: 0;
+  }
+}

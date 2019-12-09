@@ -1,0 +1,24 @@
+@import '../../base';
+.#{$pre}-progress {
+  &__tip {
+    color: #93a7ff;
+  }
+  &__outer {
+    background-color: #dadaf2;
+    border-radius: 200px;
+    overflow: hidden;
+  }
+  &__bar {
+    height: 0px;
+    border: 6px solid #93a7ff;
+    transition: all 0.3s linear 0s;
+  }
+  &--success {
+    .#{$pre}-progress__tip {
+      color: #13bf63;
+    }
+    .#{$pre}-progress__bar {
+      border: 6px solid #13bf63;
+    }
+  }
+}

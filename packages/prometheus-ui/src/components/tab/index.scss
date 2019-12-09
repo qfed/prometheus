@@ -1,0 +1,210 @@
+@import "../../base";
+
+.#{$pre}-tab {
+  &--bottom {
+    flex-direction: column-reverse;
+  }
+
+  &--top {
+    .#{$pre}-tab__bar {
+      border-bottom: 1px solid #eeeeee;
+    }
+  }
+  &--bottom {
+    .#{$pre}-tab__bar {
+      border-top: 1px solid #eeeeee;
+    }
+    .#{$pre}-tab__bar-tab__txt {
+      font-size: 20px;
+      letter-spacing: 0;
+      text-align: center;
+      line-height: 30px;
+    }
+    .#{$pre}-tab__bar-tab {
+      padding: 16px;
+      padding-bottom: 11px;
+    }
+  }
+
+  &__bar {
+    overflow: auto;
+    line-height: 2.828571429;
+    flex-direction: column;
+
+    &--top,
+    &--bottom {
+      flex-direction: row;
+      width: 100%;
+    }
+    &--left,
+    &--right {
+      flex-direction: column;
+      height: 100%;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &--bottom {
+      .#{$pre}-tab__bar-underline {
+        display: none;
+      }
+    }
+  }
+
+  &__bar-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    // 两个transform相关是为tab个数多到超出屏幕时准备的
+    transition: transform 0.3s cubic-bezier(0.35, 0, 0.25, 1),
+      -webkit-transform 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+    will-change: transform;
+    overflow: hidden;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__bar-tab {
+    flex-shrink: 0; // 不缩小
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    padding: 30px;
+    font-size: 40px;
+    &--active {
+      .#{$pre}-tab__bar-tab__icon,
+      .#{$pre}-tab__bar-tab__txt {
+        color: $brand-primary;
+      }
+      .#{$pre}-tab__bar-tab__arrow{
+        fill: $brand-primary !important;
+      }
+    }
+    &__mask {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+    }
+
+    &__icon {
+      line-height: 44px;
+      font-size: 44px !important;
+    }
+    &__txt {
+      line-height: 1;
+      font-size: 28px;
+      max-width: 120px;
+    }
+    &__arrow{
+      position: absolute;
+      right: 0;
+      transition: all .5s ease-in-out;
+      &--active{
+       
+        transform:rotate(180deg);
+        transform-origin: center center;
+      }
+    }
+    &--bottom {
+      flex-direction: column;
+    }
+  }
+
+  &__bar-underline {
+    display: inline-block;
+    position: absolute;
+    height: 8px;
+    width: 60px;
+    background-color: $brand-primary;
+    bottom: 0;
+    transform: translateX(-50%);
+    &--animated {
+      transition: top 0.3s cubic-bezier(0.35, 0, 0.25, 1),
+        left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+      will-change: top, left;
+    }
+  }
+
+  &__wrap{
+    position: relative;
+    .popup-list{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: scroll;
+      &__wrap{
+        background: white;
+        position: absolute ;
+        width: 100%;
+        z-index: 1;
+        padding: 0 30px;
+      }
+      &__item{
+        background: white;
+        border-bottom: 1px solid  #eeeeee;
+        padding: 30px 0;
+
+        &__content{
+          &--active{
+            color: $brand-primary;
+          }
+        }
+        
+        &__status{
+          fill: $brand-primary;
+        }
+
+        &__title {
+          font-size: 32px;
+          color: #333333;
+          line-height: 48px;
+          margin-bottom: 30px;
+        }
+      }
+      &__mask{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(black, .6)
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: flex;
+    position: relative;
+    // touch-action: pan-x pan-y;
+    &--animated {
+      transition: transform 0.3s cubic-bezier(0.35, 0, 0.25, 1),
+        -webkit-transform 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+      will-change: transform;
+    }
+  }
+
+
+
+  &__content-item {
+    width: 100%;
+    flex-shrink: 0;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

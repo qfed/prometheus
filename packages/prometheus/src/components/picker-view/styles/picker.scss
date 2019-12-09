@@ -1,0 +1,72 @@
+.pro-picker,
+.pro-multi-picker {
+  height: 360px; /*34*7*/
+}
+
+.pro-multi-picker {
+  display: flex;
+  align-items: center;
+}
+
+.pro-picker-item {
+  font-size: 38px;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 10px;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #333333;
+  opacity: 0.4;
+  width: 100%;
+  box-sizing: border-box;
+
+  &-selected {
+    // font-size: 46px;
+    opacity: 1;
+  }
+}
+
+.pro-picker {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  flex: 1;
+  text-align: center;
+}
+
+.pro-picker-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 3;
+  // background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6)), linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6));
+  // background-position: top, bottom;
+  // background-size: 100% 204px;
+  // background-repeat: no-repeat;
+}
+
+.pro-picker-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.pro-picker-indicator {
+  box-sizing: border-box;
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  top: 102px;
+  z-index: 3;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}

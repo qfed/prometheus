@@ -1,0 +1,28 @@
+@import '../animation/styles/mixin.scss';
+
+@keyframes expand {
+    from {
+      width: 25px;
+    }
+  
+    to {
+        width: 75px;
+        display: inline-block;
+    }
+}
+
+@keyframes shrink {
+  from {
+    width: 75px;
+    display: inline-block;
+  }
+
+  to {
+      width: 25px;
+  }
+}
+
+.expand-animation {
+  @include init-animation(expand,shrink);
+}
+

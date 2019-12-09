@@ -1,0 +1,110 @@
+@import "../../base";
+
+.#{$pre}-steps {
+  display: flex;
+  -webkit-box-flex: 1; // 防止父元素是display: -webkit-box，将其挤没了
+  flex: 1; // 防止父元素是display: flex，将其挤没了
+  font-size: $font-size-h3;
+  background-color: #FFF;
+
+  &__item {
+    position: relative;
+    width: fit-content;
+    // overflow: hidden;
+    &__hd {
+      display: flex;
+      align-items: center;
+      &__left {
+        width: 37%;
+        height: 2px;
+        background-color: $brand-primary;
+      }
+      &__up {
+        height: 30px;
+        width: 2px;
+        background-color: $brand-primary;
+        margin: 0 auto;
+      }
+      &__icon {
+        color: $brand-primary;
+        font-size: 46px !important;
+        line-height: 46px;
+      }
+      &__right {
+        width: 37%;
+        height: 2px;
+        background-color: $brand-primary;
+      }
+      &__down {
+        height: 30px;
+        width: 2px;
+        background-color: $brand-primary;
+        margin: 0 auto;
+      }
+      &__line--hide {
+        background-color: transparent;
+      }
+      &__idx {
+        font-size: 28px;
+        line-height: 46px;
+        text-align: center;
+        height: 46px;
+        width: 46px;
+        border-radius: 50%;
+        color: #fff;
+        background-color: $brand-primary;
+      }
+    }
+    &__content {
+      text-align: center;
+      width: 168px;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+  }
+  &__item--light {
+    opacity: 0.3;
+  }
+}
+
+.#{$pre}-steps--row {
+  flex-direction: row;
+  .pro-steps__item__content {
+    margin: 10px 3px;
+  }
+}
+.#{$pre}-steps--column {
+  display: flex;
+  flex-direction: column;
+  .#{$pre}-steps__item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    &__hd {
+      flex-direction: column;
+    }
+    &__content {
+      width: 500px;
+      text-align: start;
+      margin-left: 30px;
+      font-size: 32px;
+    }
+    &__icon {
+      font-size: 36px;
+      color: $brand-primary;
+      line-height: 90px;
+      text-align: center;
+      width: 76px;
+    }
+    &__tip {
+      font-size: 24px;
+      line-height: 90px;
+      width: 76px;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
