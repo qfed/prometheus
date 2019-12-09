@@ -1,0 +1,26 @@
+{
+  "name": "prometheus-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "gitlab webhook ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "app.js"
+    ]
+  },
+  "author": "advence-liz",
+  "license": "ISC",
+  "devDependencies": {
+    "debug": "^4.1.1",
+    "fs-extra": "^7.0.1",
+    "koa": "^2.6.2",
+    "koa-router": "^7.4.0",
+    "marked": "^0.6.0",
+    "shelljs": "^0.8.3"
+  }
+}

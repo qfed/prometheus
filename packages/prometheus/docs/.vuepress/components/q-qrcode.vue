@@ -2,7 +2,6 @@
 
   <div class="q-qrcode">
     <img class="q-qrcode__img" :src="imageUrl" />
-    <a class="q-qrcode__link" href="http://wiki.qudian.com/pages/viewpage.action?pageId=35826133" target="_blank">查看UI规范</a>
   </div>
 
 </template>

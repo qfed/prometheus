@@ -35,7 +35,6 @@
     ]
   },
   "dependencies": {
-    "@qfe/q-ui": "^1.1.13",
     "classnames": "^2.2.6",
     "core-decorators": "^0.20.0",
     "react-transition-group": "^2.6.0"
