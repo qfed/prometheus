@@ -71,7 +71,6 @@
     "cross-env": "^5.2.0",
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
-    "eslint-config-q-eslint": "git+ssh://git@git.qufenqi.com:fe/q-eslint.git",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^6.0.1",
