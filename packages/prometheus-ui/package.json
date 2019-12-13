@@ -1,6 +1,6 @@
 {
   "name": "@qfed/prometheus-ui",
-  "version": "1.1.13",
+  "version": "0.0.0",
   "description": "q-ui",
   "private": false,
   "main": "dist",

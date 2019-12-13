@@ -9,7 +9,7 @@ module.exports = {
   resolve: {
     alias: {
       // base: path.resolve('src', 'base')
-      '@qfed/prometheus-ui': path.join(__dirname, '..', '..', '..', 'prometheus-ui')
+      // '@qfed/prometheus-ui': path.join(__dirname, '..', '..', '..', 'prometheus-ui')
     },
     extensions: ['.ts', '.tsx', '.less', '.js', '.json']
   },
