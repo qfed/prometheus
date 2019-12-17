@@ -44,9 +44,6 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader'
-          },
-          {
-            loader: 'ts-loader'
           }
         ]
       },

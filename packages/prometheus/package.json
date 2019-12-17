@@ -53,6 +53,7 @@
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.7.4",
     "@babel/runtime-corejs3": "^7.0.0",
     "@qfed/prometheus-ui": "^0.0.0",
     "@types/classnames": "^2.2.6",

@@ -48,12 +48,6 @@ module.exports = {
           // 'cache-loader',
           {
             loader: 'babel-loader'
-          },
-          {
-            loader: 'ts-loader',
-            options: {
-              // transpileOnly: false
-            }
           }
         ]
       },
