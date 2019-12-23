@@ -1,0 +1,10 @@
+.pro-picker-view {
+  &__hd {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn {
+    margin: 5px;
+    min-width: 80px;
+  }
+}

@@ -1,0 +1,56 @@
+{{extend '../_layout.art'}}
+
+{{block 'content'}}
+
+<q-demo>
+  <h1>普通状态</h1>
+  <div class="pro-searchbar">
+    <div class="pro-searchbar__input-wrap">
+      <div class="pro-searchbar__synthetic">
+        <i class="pro-searchbar__synthetic__icon iconfont icon-navSearch" style="font-size: 17px"></i>
+        <span class="pro-searchbar__placeholder">搜索</span>
+      </div>
+      <input class="pro-searchbar__input" type="text" />
+    </div>
+    <div class="pro-searchbar__cancel">取消</div>
+  </div>
+  <h1>获取焦点之后的状态</h1>
+  <div class="pro-searchbar pro-searchbar--focus">
+    <div class="pro-searchbar__input-wrap">
+      <div class="pro-searchbar__synthetic">
+        <i class="pro-searchbar__synthetic__icon iconfont icon-navSearch" style="font-size: 17px"></i>
+        <span class="pro-searchbar__placeholder">搜索</span>
+      </div>
+      <input class="pro-searchbar__input" type="text" />
+      <div class="pro-searchbar__clear ">
+        <i class=" pro-searchbar__clear__icon icon icon-delete_fill" style="font-size: 17px"></i>
+      </div>
+    </div>
+    <div class="pro-searchbar__cancel">取消</div>
+  </div>
+  <h1>显示搜索结果状态</h1>
+  <div class="pro-searchbar pro-searchbar--focus">
+    <div class="pro-searchbar__input-wrap">
+      <div class="pro-searchbar__synthetic">
+        <i class="pro-searchbar__synthetic__icon iconfont icon-navSearch" style="font-size: 17px"></i>
+      </div>
+      <input
+        class="pro-searchbar__input"
+        type="text"
+        value="fruit"
+      />
+      <div class="pro-searchbar__clear ">
+        <i class="pro-searchbar__clear__icon iconfont icon-failure" style="font-size: 17px"></i>
+      </div>
+    </div>
+    <div class="pro-searchbar__cancel">取消</div>
+  </div>
+  <div class="pro-search-list">
+    <div class="pro-search-list__item">apple</div>
+    <div class="pro-search-list__item">banana</div>
+    <div class="pro-search-list__item">coco</div>
+    <div class="pro-search-list__item">pineapple</div>
+  </div>
+</q-demo>
+
+{{/block}}

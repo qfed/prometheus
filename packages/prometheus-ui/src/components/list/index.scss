@@ -1,0 +1,100 @@
+@import '../../base';
+
+@mixin item-padding {
+  padding: 26px 0;
+}
+@mixin truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+// list容器行样式，约束list元素布局
+.#{$pre}-list {
+  &__hd {
+    color: #666666;
+    font-size: 24px;
+    padding: 20px 30px;
+  }
+  &__bd {
+    background: #fff;
+    padding: 0 30px;
+  }
+
+  &-line {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+
+    color: #999999;
+
+    &--multiple {
+      @include item-padding;
+      .#{$pre}-list-line__bd {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        &__brief {
+          display: -webkit-box;
+          display: -moz-box;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2; /*显示行数*/
+        }
+      }
+
+      .#{$pre}-list-line__ft {
+        white-space: normal;
+        overflow: auto;
+        text-overflow: clip;
+        flex-basis: 36%;
+      }
+    }
+    &__hd {
+      margin-right: 20px;
+    }
+    &__bd {
+      flex: 1;
+      align-self: baseline; // NOTE 设计要求使用对齐第一行
+      color: #333333;
+      @include item-padding;
+      @include truncate;
+
+      &__brief {
+        margin-top: 10px;
+        font-size: 24px;
+        color: #999999;
+        @include truncate;
+      }
+    }
+    &__ft {
+      text-align: right;
+      @include truncate;
+    }
+
+    &__arrow {
+      margin-left: 10px;
+      color: #cccccc;
+    }
+    &:not(:last-child) {
+      &:after {
+        content: '';
+        position: absolute;
+        background-color: #eee;
+        display: block;
+        z-index: 1;
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        transform-origin: 50% 100%;
+        transform: scaleY(0.5);
+      }
+    }
+  }
+}

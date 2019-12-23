@@ -1,0 +1,45 @@
+{{extend '../_layout.art'}}
+
+{{block 'content'}}
+
+<h2>默认</h2>
+<q-demo>
+  <label class="pro-switch">
+    <div class="pro-switch__v-checkbox"></div>
+  </label>
+  <label class="pro-switch pro-switch--checked">
+    <div class="pro-switch__v-checkbox"></div>
+  </label>
+</q-demo>
+
+<h2>默认禁用状态</h2>
+<q-demo>
+  <label class="pro-switch  pro-switch--disabled">
+    <div class="pro-switch__v-checkbox"></div>
+  </label>
+  <label class="pro-switch  pro-switch--checked pro-switch--disabled">
+    <div class="pro-switch__v-checkbox"></div>
+  </label>
+</q-demo>
+
+<h2>其他颜色</h2>
+<q-demo>
+  <label class="pro-switch pro-switch--warn ">
+    <div class="pro-switch__v-checkbox"></div>
+  </label>
+  <label class="pro-switch pro-switch--warn pro-switch--checked">
+    <div class="pro-switch__v-checkbox"></div>
+  </label>
+</q-demo>
+
+<h2>其他颜色禁用状态</h2>
+<q-demo>
+  <label class="pro-switch pro-switch--warn pro-switch--disabled">
+    <div class="pro-switch__v-checkbox"></div>
+  </label>
+  <label class="pro-switch pro-switch--warn pro-switch--checked pro-switch--disabled">
+    <div class="pro-switch__v-checkbox"></div>
+  </label>
+</q-demo>
+
+{{/block}}

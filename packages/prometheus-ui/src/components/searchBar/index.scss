@@ -1,0 +1,129 @@
+@import "../../base";
+.#{$pre}-searchbar {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  &__input-wrap {
+    position: relative;
+    flex: 1;
+    border-radius: 34px;
+    background-color: #f9f9f9;
+    height: 68px;
+    margin-left: 12px;
+    margin-right: 12px;
+    overflow: hidden;
+  }
+  &__synthetic {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #cccccc;
+    padding-left: 30px;
+    transition: width 0.3s;
+    display: flex;
+    justify-content: center;
+    margin-left: -15px;
+    margin-top: -3px;
+    align-items: center;
+    font-size: 26px;
+    padding-top: 6px;
+  }
+  &__clear {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 16px;
+    width: 34px;
+    display: flex;
+    color: #bbb;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 3;
+
+    &__icon {
+      font-size: 32px;
+    }
+
+    .iconfont {
+      font-size: 32px;
+    }
+  }
+  &__placeholder {
+    font-family: PingFangSC-Regular;
+    font-size: 26px;
+    color: #cccccc;
+    letter-spacing: 0;
+    line-height: 26px;
+    margin-left: 12px;
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 34px;
+    padding-left: 74px;
+    border: none;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+    font-size: 26px;
+    line-height: 26px;
+    background: transparent;
+  }
+  &__cancel {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    display: none;
+    font-family: PingFangSC-Regular;
+    color: #333333;
+    letter-spacing: 0;
+    text-align: right;
+
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  &--focus {
+    .#{$pre}-searchbar__cancel {
+      display: flex;
+    }
+    .#{$pre}-searchbar__synthetic {
+      justify-content: left;
+      margin-left: 0px;
+    }
+    .#{$pre}-search-placeholder {
+      display: none;
+    }
+    .#{$pre}-searchbar__clear {
+      display: flex;
+    }
+
+    .#{$pre}-searchbar__synthetic__icon {
+      position: relative;
+      left: initial;
+      transform: translateX(0px);
+    }
+  }
+}
+
+.#{$pre}-search-list {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  &__item {
+    padding: 26px 0px 26px 30px;
+    display: flex;
+    line-height: 1;
+    border-bottom: 1px solid #eee;
+    font-size: 32px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 48px;
+  }
+}

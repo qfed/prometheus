@@ -1,0 +1,15 @@
+// 1px 暂只支持下边距，后期添加方向参数
+// .border-1px() {
+//     position: relative;
+//     &::before {
+//         content: '';
+//         display: block;
+//         position: absolute;
+//         left: $padding-base;
+//         right: 0;
+//         bottom: 0;
+//         transform-origin: 0 0;
+//         transform: scaleY(0.5);
+//         border-bottom: 1px solid#D8D8D8;
+//     }
+// }

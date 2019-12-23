@@ -1,0 +1,58 @@
+@import '../../base';
+
+.#{$pre}-popup-demo {
+  height: 800px;
+  &--active {
+    .#{$pre}-toast {
+      &__container {
+        position: absolute;
+        z-index: 0;
+      }
+    }
+  }
+}
+
+.#{$pre}-toast {
+  min-width: 180px;
+  max-width: 520px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 12px 12px;
+  border: 1px solid #999;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border: 0px solid rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  line-height: 1.5;
+  position: relative;
+  margin: 20px auto;
+  
+  &__container {
+    position: fixed;
+    z-index: 999;
+    text-align: center;
+  }
+
+  &--withicon {
+    min-height: 182px;
+  }
+
+  &__icon {
+    display: block;
+    font-size: 72px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  &__content {
+    font-family: PingFangSC-Regular;
+    font-size: 28px;
+    color: #ffffff;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 42px;
+  }
+}
