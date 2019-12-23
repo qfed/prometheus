@@ -12,7 +12,7 @@ module.exports = {
       'react-router-dom'
     ]
   },
-  mode: 'development',
+  mode: 'production',
   output: {
     path: path.join(__dirname, 'vendor'),
     filename: 'dll.[name].js',

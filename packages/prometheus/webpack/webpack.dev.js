@@ -47,7 +47,8 @@ module.exports = {
         use: [
           // 'cache-loader',
           {
-            loader: "babel-loader"
+            loader: "babel-loader",
+            options: { cacheDirectory: true }
           },
           {
             loader: "ts-loader",
