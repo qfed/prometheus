@@ -10,7 +10,7 @@ module.exports = {
   head: [["link", { rel: "icon", href: `/logo.ico` }]],
   title: "Prometheus",
   description: "React Componet for Prometheus-UI",
-  base: `/`,
+  base: `/prometheus/`,
   port: getPort(3002),
   themeConfig: {
     nav: [

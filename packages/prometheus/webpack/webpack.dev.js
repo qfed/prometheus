@@ -37,7 +37,7 @@ module.exports = {
   output: {
     filename: '[name]/[name].js',
     path: path.resolve(__dirname,'dist'),
-    publicPath: isProd() ? '/react-demo/' : '/'
+    publicPath: isProd() ? '/prometheus/react-demo/' : '/'
   },
   module: {
     rules: [
