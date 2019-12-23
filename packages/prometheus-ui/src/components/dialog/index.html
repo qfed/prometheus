@@ -1,0 +1,28 @@
+{{extend '../_layout.art'}}
+
+{{block 'content'}}
+
+<q-demo>
+  <div style="background-color: rgba(0, 0, 0, 0.6);display: flex;justify-content: center;padding: 15px">
+    <div class="pro-dialog">
+      <div class="pro-dialog__hd">
+        <div class="pro-dialog__hd__image"></div>
+        <div class="pro-dialog__hd__close"></div>
+        <div class="pro-dialog__hd__title">标题单行</div>
+      </div>
+      <div class="pro-dialog__bd">
+        <div class="pro-dialog__bd__content">告知当前状态，信息和解决方案，不要超过两行</div>
+      </div>
+      <div class="pro-dialog__ft">
+        <a href="javascript:;" class="pro-dialog__btn pro-dialog__btn--default"
+          >取消</a
+        >
+        <a href="javascript:;" class="pro-dialog__btn pro-dialog__btn--primary"
+          >确定</a
+        >
+      </div>
+    </div>
+  </div>
+</q-demo>
+
+{{/block}}

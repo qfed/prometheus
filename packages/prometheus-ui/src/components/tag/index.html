@@ -1,0 +1,21 @@
+{{extend '../_layout.art'}}
+
+{{block 'content'}}
+<div>基础用法</div>
+<q-demo>
+  <div class="pro-tag-group">
+    <div class="pro-tag">默认标签</div> 
+    <div class="pro-tag selected">选中标签</div>
+    <div class="pro-tag disabled">选中标签</div>
+    <div class="pro-tag">默认标签<i class="pro-tag__icon iconfont icon-closePop"></i></div>
+    <div class="pro-tag pro-tag--aquamarine">自定义颜色标签<i class="pro-tag__icon iconfont icon-closePop"></i></div>
+  </div>
+</q-demo>
+<div>推荐模式标签</div>
+<q-demo>
+  <div class="pro-tag-group">
+    <div class="pro-tag pro-tag--recommend">推荐模式标签</div> 
+  </div>
+</q-demo>
+
+{{/block}}

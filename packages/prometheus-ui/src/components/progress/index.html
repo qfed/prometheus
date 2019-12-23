@@ -1,0 +1,26 @@
+{{extend '../_layout.art'}}
+    
+{{block 'content'}}
+
+<q-demo>
+  <div calss="pro-progress">
+    <h3 class="pro-progress__tip text-right">1/4</h3>
+    <div class="pro-progress__outer">
+      <div class="pro-progress__bar" style="width: 25%;"></div>
+    </div>
+  </div>
+  <div class="pro-progress pro-progress--success">
+    <h3 class="pro-progress__tip text-right">完成</h3>
+    <div class="pro-progress__outer">
+      <div class="pro-progress__bar" style="width: 100%;"></div>
+    </div>
+  </div>
+  <div class="pro-progress">
+    <h3 class="pro-progress__tip text-right">3/4</h3>
+    <div class="pro-progress__outer">
+      <div class="pro-progress__bar" style="width: 75%;"></div>
+    </div>
+  </div>
+</q-demo>
+
+{{/block}}

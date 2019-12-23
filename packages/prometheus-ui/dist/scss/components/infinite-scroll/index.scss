@@ -1,0 +1,28 @@
+@import '../../base.scss';
+.#{$pre}-infinite-scroll {
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  &__border {
+    border-top: 1px solid #aaaaaa;
+    width: 80px;
+    display: inline-block;
+  }
+
+  &__text {
+    font-family: PingFangSC-Regular;
+    font-size: 24px;
+    color: #aaaaaa;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 36px;
+    margin: 0 20px;
+  }
+
+  &__loading {
+    background-color: #cccccc !important;
+  }
+}

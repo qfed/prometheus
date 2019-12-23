@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "strict": false,
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "module": "es2015",
+    "target": "esnext",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "lib": ["es2016", "dom"],
+    "baseUrl": "./src",
+    "paths": {
+      "*": ["*", "base/*"],
+      "qui/*": ["@q/q-ui/dist/scss/components/*"]
+    },
+    "typeRoots": ["./typings"]
+  },
+  "include": ["./src/**/*"]
+}

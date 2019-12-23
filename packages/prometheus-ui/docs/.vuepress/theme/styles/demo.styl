@@ -1,0 +1,48 @@
+.q {
+  &-demo {
+    padding: 1rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    .color-wrap {
+      display: flex;
+      justify-content: space-between;
+
+      & > div {
+        height: 90px;
+        width: 90px;
+        color: #fff;
+      }
+    }
+  }
+
+  &-desc {
+    margin: 1rem;
+    padding: 5px;
+    // background: #F0F0FA;
+    // background-image: linear-gradient(45deg,#ffaa00,#ffd500)
+  }
+}
+
+.icon_lists {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon_lists li {
+  list-style: none !important;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.icon_lists .icon {
+  font-size: 42px;
+  color: #333;
+  transition: font-size 0.25s ease-out 0s;
+}
+
+// .icon_lists .icon:hover {
+//   font-size: 100px;
+// }

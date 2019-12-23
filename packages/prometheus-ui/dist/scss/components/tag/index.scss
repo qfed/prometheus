@@ -1,0 +1,69 @@
+@import "../../base";
+
+.#{$pre}-tag {
+    display: inline-block;
+    font-size: 28px;
+    // height: 42px;
+    line-height: 42px;
+    padding: 9px 20px;
+    color: #d8d8d8;
+    background-color: #f9f9f9;
+    margin: 0 20px 20px 0;
+
+    &-group {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &.selected {
+        color: #fff;
+        background-color: $brand-primary;
+    }
+    
+    &.disabled {
+        color: #bbb;
+        background-color: #ddd;
+    }
+
+    &__icon.iconfont {
+        font-size: 20px;
+        margin-left: 8px;
+    }
+
+    &--aquamarine {
+        color: #fff;
+        background-color: #62C0A0;
+    }
+
+    &--plain {
+        line-height: 36px;
+        background-color: #fff;
+        border: 1px solid #c9c9c9;
+        color: #c9c9c9;
+
+        &.#{$pre}-tag--crimson {
+            border-color: #FF3131;
+            color: #FF3131;
+        }
+
+        &.#{$pre}-tag--royalblue {
+            border-color: #7584CD;
+            color: #7584CD;
+        }
+
+        &.#{$pre}-tag--aquamarine {
+            border-color: #62C0A0;
+            color: #62C0A0;
+        }
+    }
+    &--recommend {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
+        border-radius: 20px;
+        border-bottom-left-radius: 0;
+        color: #fff;
+        font-size: 18px;
+        background-color: #FF5040;
+    }
+}

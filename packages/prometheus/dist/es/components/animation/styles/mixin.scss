@@ -1,0 +1,9 @@
+@mixin init-animation($enter,$exit) {
+    &-enter,
+    &-appear {
+      animation-name: $enter;
+    }
+    &-exit {
+      animation-name: $exit;
+    }
+  }

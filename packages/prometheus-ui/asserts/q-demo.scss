@@ -1,0 +1,66 @@
+.page__header {
+  text-align: center;
+  padding: 1rem;
+}
+
+.page__body {
+  /* padding: 0px 2px; */
+}
+
+.q-demo,
+q-demo {
+  padding: 1rem 10px;
+  border: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.q-demo .color-wrap,
+q-demo .color-wrap {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.q-demo .color-wrap > div,
+q-demo .color-wrap > div {
+  height: 90px;
+  width: 90px;
+  color: #fff;
+}
+
+.q-demo + .q-demo,
+q-demo + q-demo {
+  margin-top: 10px;
+}
+
+q-demo {
+  display: block;
+}
+/*  占位 */
+.q-icon__occupy {
+  vertical-align: middle;
+  height: 22px;
+  width: 22px;
+  background: #fa6c41;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+.icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  .icon-item {
+    margin: 10px;
+    text-align: center;
+    width: 42%;
+    &__text {
+      font-size: 32px;
+    }
+  }
+}

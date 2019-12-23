@@ -1,0 +1,26 @@
+.popover__child {
+  font-size: 24px;
+  padding: 19px 33px;
+
+  &--normal {
+    font-family: PingFangSC-Regular;
+    font-size: 28px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 42px;
+  }
+}
+.q-checkbox__icon {
+  display: none;
+}
+
+.topCenter {
+  border-radius: 8px;
+}
+
+.q-input {
+  background-color: #fff;
+}
+.q-input__label-text {
+  margin-left: 22px;
+}
