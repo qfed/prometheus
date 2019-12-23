@@ -47,8 +47,8 @@ export default {
   computed: {
     url: function() {
       return this.name
-        ? `http://qui.qufenqi.com/react-demo/${this.name}/${this.name}.html`
-        : `http://qui.qufenqi.com/react-demo/`;
+        ? ` https://qfed.github.io/prometheus/react-demo/${this.name}/${this.name}.html`
+        : ` https://qfed.github.io/prometheus/react-demo/`;
     }
   }
 };

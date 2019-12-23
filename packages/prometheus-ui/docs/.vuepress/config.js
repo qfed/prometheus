@@ -1,6 +1,10 @@
 const glob = require('glob')
 const path = require('path')
 const getPort = require('../../lib/get-port')
+const host =
+  process.env.NODE_ENV === "dev"
+    ? "http://localhost:5000"
+    : "https://qfed.github.io/prometheus";
 module.exports = {
   head: [
     [
@@ -24,8 +28,7 @@ module.exports = {
       { text: '主页', link: '/' },
       { text: '设计', link: '/guide/' },
       { text: '组件', link: '/components/' },
-      { text: 'q-react', link: '/react' },
-      { text: 'gitlab', link: '/q-ui' }
+      { text: 'prometheus', link: `${host}/react`},
     ],
     sidebar: {
       '/components/': genSidebar()
