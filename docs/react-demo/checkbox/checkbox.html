@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  
-  
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>checkbox</title>
-  </head>
-  <style>
-    .location-path {
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>checkbox</title></head><style>.location-path {
       padding: 10px 20px;
       background: black;
     }
@@ -24,65 +13,4 @@
       font-size: 24px;
       margin: 12px 24px;
       /* background: white; */
-    }
-  </style>
-  <!-- <script>
-    ;(function flexible(window, document) {
-      var docEl = document.documentElement
-      var dpr = window.devicePixelRatio || 1
-
-      // adjust body font size
-      function setBodyFontSize() {
-        if (document.body) {
-          document.body.style.fontSize = 12 * dpr + 'px'
-        } else {
-          document.addEventListener('DOMContentLoaded', setBodyFontSize)
-        }
-      }
-      setBodyFontSize()
-
-      // set 1rem = viewWidth / 10
-      function setRemUnit() {
-        var rem = docEl.clientWidth / 10
-        docEl.style.fontSize = rem + 'px'
-      }
-
-      setRemUnit()
-
-      // reset rem unit on page resize
-      window.addEventListener('resize', setRemUnit)
-      window.addEventListener('pageshow', function(e) {
-        if (e.persisted) {
-          setRemUnit()
-        }
-      })
-
-      // detect 0.5px supports
-      if (dpr >= 2) {
-        var fakeBody = document.createElement('body')
-        var testElement = document.createElement('div')
-        testElement.style.border = '.5px solid transparent'
-        fakeBody.appendChild(testElement)
-        docEl.appendChild(fakeBody)
-        if (testElement.offsetHeight === 1) {
-          docEl.classList.add('hairlines')
-        }
-        docEl.removeChild(fakeBody)
-      }
-    })(window, document)
-  </script> -->
-  <body>
-    <div id="checkbox">
-      <div class="location-path">
-        <input type="text" readonly value="/checkbox/checkbox" />
-      </div>
-      <div class="nav-bar">
-        <a href="../index.html">HOME</a>/
-        <span style="text-transform:capitalize"> checkbox</span>
-      </div>
-    </div>
-    <div id="root"></div>
-    <script src="/prometheus/react-demo/dll.vendor.js"></script>
-    <script type="text/javascript" src="checkbox.js"></script>
-  </body>
-</html>
+    }</style><body><div id="checkbox"><div class="location-path"><input readonly="readonly" value="/checkbox/checkbox"></div><div class="nav-bar"><a href="../index.html">HOME</a>/ <span style="text-transform:capitalize">checkbox</span></div></div><div id="root"></div><script src="/prometheus/react-demo/dll.vendor.js"></script><script src="checkbox.js"></script></body></html>

@@ -19,7 +19,7 @@ export default {
   // },
   computed: {
     imageUrl: function() {
-      return qrMapList[this.name]
+      return 'http://img003.qufenqi.com/products/70/6b/706bbde6859bcaefdd116b5230dea2e0.png'
     }
   }
 };
