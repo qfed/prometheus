@@ -5,15 +5,15 @@ const path = require("path")
 const marked = require("marked")
 const Router = require("koa-router")
 const app = new Koa()
-const UIPath = 'q-ui'
-const ReactPath = 'q-react'
+const UIPath = 'prometheus-ui'
+const ReactPath = 'prometheus'
+const WebsiteRoot = '../../docs'
 // 子路由
 let home = new Router()
 home.get("/", async ctx => {
   const md = fs.readFileSync(path.join(__dirname, "README.md"), {
     encoding: "utf8"
   })
-  console.log("test pm2 --wacth")
   ctx.body = marked.parse(md)
 })
 
@@ -52,18 +52,18 @@ function deployReactWebsite(cb = () => {}) {
   // exec(`cd ../${ReactPath} && git reset --hard origin/master && git pull origin master && yarn`)
   exec(`cd ../${ReactPath} && yarn run deploy`)
   exec(`cd ../${ReactPath} && yarn run deploy:demo`)
-  exec('rm -rf ./www/react')
-  exec(`cp -r ../${ReactPath}/webpack/dist ./www/react-demo`)
-  exec(`cp -r ../${ReactPath}/docs/.vuepress/dist ./www/react`)
+  exec(`rm -rf ${WebsiteRoot}`)
+  // copy react docs
+  exec(`cp -r ../${ReactPath}/docs/.vuepress/dist ${WebsiteRoot}`)
+  // copy react-demo
+  exec(`cp -r ../${ReactPath}/webpack/dist ${WebsiteRoot}/react-demo`)
+  // copy ui docs
+  exec(`cp -r ../${UIPath}/docs/.vuepress/dist ${WebsiteRoot}/ui`)
   // exec(`yarn run deploy:demo`)
 }
 function deployWebsite( cb = () => {}) {
   // exec(`cd ../${UIPath} && git reset --hard origin/master && git pull origin master && yarn && yarn run deploy`)
-    exec(`cd ../${UIPath} && yarn run deploy`)
-
-  exec('rm -rf ./www')
-  exec(`cp -r ../${UIPath}/docs/.vuepress/dist ./www`)
-  exec(`cp -r ../${ReactPath}/webpack/dist ./www/react-demo`)
-  exec(`cp -r ../${ReactPath}/docs/.vuepress/dist ./www/react`)
-  // exec(`cp -r ../${ReactPath}/docs/.vuepress/dist ./www/react`)
+  exec(`cd ../${UIPath} && yarn run deploy`)
+  exec(`rm -rf ${WebsiteRoot}/ui`)
+  exec(`cp -r ../${UIPath}/docs/.vuepress/dist ${WebsiteRoot}/ui`)
 }

@@ -16,7 +16,7 @@ module.exports = {
   title: 'Prometheus',
   description: 'CSS Framework',
   // dest:`../q-website/www`,
-  base: `/`,
+  base: `/ui/`,
   port: getPort(3002),
   evergreen:true,
   themeConfig: {

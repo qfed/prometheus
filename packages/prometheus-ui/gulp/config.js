@@ -40,7 +40,7 @@ module.exports = {
         minPixelValue: 0
       },
       autoprefixer: {
-        browsers: ['> 1%', 'ios 6', 'android 4']
+        overrideBrowserslist: ['> 1%', 'ios 6', 'android 4']
         // cascade: true
       }
     },

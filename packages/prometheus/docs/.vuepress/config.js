@@ -17,12 +17,12 @@ module.exports = {
   title: 'Prometheus',
   description: 'React Componet for Prometheus-UI',
   // dest: WebsiteRootAPI,
-  base: `/react/`,
+  base: `/`,
   port: getPort(3002),
   themeConfig: {
     nav: [
-      { text: '主页', link: '/' },
-      { text: '组件', link: '/components/' },
+      { text: '主页', link: '/components/' },
+      // { text: '组件', link: '/components/' },
       { text: '全局样式', link: 'http://qui.qufenqi.com/guide' },
       { text: 'q-ui', link: 'http://qui.qufenqi.com' },
       { text: 'gitlab', link: 'https://git.qufenqi.com/fe/q-react' },

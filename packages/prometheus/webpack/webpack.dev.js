@@ -36,7 +36,7 @@ module.exports = {
   mode: 'development',
   output: {
     filename: '[name]/[name].js',
-    path: path.resolve(WebsiteRootDEMO),
+    path: path.resolve(__dirname,'dist'),
     publicPath: isProd() ? '/react-demo/' : '/'
   },
   module: {
