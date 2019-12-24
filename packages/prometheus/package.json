@@ -16,7 +16,7 @@
     "deploy:demo": "cross-env NODE_ENV=production webpack --config webpack/webpack.dev.js",
     "build": "cross-env NODE_ENV=development node bin/build.js",
     "build:prod": "cross-env NODE_ENV=production node bin/build.js",
-    "prepublish": "build:prod",
+    "prepublish": "npm run build:prod",
     "vendor": "webpack --config webpack/webpack.vendor.js",
     "test": "webpack-dev-server  --config webpack/webpack.dev.js  --host 10.11.8.163",
     "parallel": "parallel-webpack --config=webpack/webpack.parallel.js --watch --no-stats",
@@ -115,5 +115,6 @@
     "webpack-dev-server": "^3.1.4",
     "webpack-hot-middleware": "^2.22.2",
     "yargs": "^11.0.0"
-  }
+  },
+  "gitHead": "3926bd16f70ba5c0ad9f9769f6a5243e6b686cc7"
 }
