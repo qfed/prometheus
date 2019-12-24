@@ -1,6 +1,6 @@
 {
   "name": "prometheus-website",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "description": "gitlab webhook ",
   "main": "app.js",
