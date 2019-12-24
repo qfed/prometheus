@@ -34,7 +34,7 @@ export default class SpecialPage extends BaseComponent<ISpecialPageProps, any> {
     state: {
         disabled: boolean;
     };
-    readonly classNames: string;
+    get classNames(): string;
     onCancel: () => void;
     onConfirm: () => void;
     render(): JSX.Element;

@@ -1,68 +1,69 @@
-const path = require('path')
-// const CleanWebpackPlugin = require('clean-webpack-plugin')
-const BundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-const autoprefixer = require('autoprefixer')
-const { resolve, output, devtool } = require('./config')
-const { green, blue } = require('chalk')
-const env = process.env.NODE_ENV
+const path = require("path");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const BundleAnalyzer = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const autoprefixer = require("autoprefixer");
+const { resolve, output, devtool } = require("./config");
+const { green, blue } = require("chalk");
+const env = process.env.NODE_ENV;
 
-const pxtowhatever = require('pxtowhatever')
-console.info(blue('NODE_ENV'), '=', green(env))
+const pxtowhatever = require("pxtowhatever");
+console.info(blue("NODE_ENV"), "=", green(env));
 
 const pxtoremSettings = remUnit =>
   pxtowhatever({
-    unit: '/75rem',
+    unit: "/75rem",
     propList: [
-      '*',
-      '!letter-spacing',
-      '!border',
-      '!border-top',
-      '!border-left',
-      '!border-right',
-      '!border-bottom'
+      "*",
+      "!letter-spacing",
+      "!border",
+      "!border-top",
+      "!border-left",
+      "!border-right",
+      "!border-bottom"
     ],
     minPixelValue: 1
-  })
+  });
 
 module.exports = {
-  entry: './src',
+  entry: "./src",
   mode: env,
   performance: {
     hints: false
   },
   output: {
     filename: output.filename,
-    path: output.path,
-    library: 'pro',
-    libraryTarget: 'umd'
+    path: path.join(output.path, "umd"),
+    library: "pro",
+    libraryTarget: "umd"
   },
-  context: path.resolve(__dirname, '..'),
+  context: path.resolve(__dirname, ".."),
   module: {
     rules: [
       {
         test: /\.tsx?$/,
         use: [
           {
-            loader: 'babel-loader'
+            loader: "babel-loader"
           },
           {
-            loader: 'ts-loader'
+            loader: "ts-loader"
           }
         ]
       },
       {
         test: /\.(scss|sass)$/,
         use: [
-          'style-loader',
-          'css-loader?minimize',
+          "style-loader",
+          "css-loader?minimize",
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
             options: {
               plugins: [autoprefixer(), pxtoremSettings()]
             }
           },
           {
-            loader: 'sass-loader'
+            loader: "sass-loader"
           }
         ]
       },
@@ -71,25 +72,25 @@ module.exports = {
         test: /\.(less|css)$/,
         use: [
           {
-            loader: 'style-loader' // creates style nodes from JS strings
+            loader: "style-loader" // creates style nodes from JS strings
           },
           {
-            loader: 'css-loader?minimize' // translates CSS into CommonJS
+            loader: "css-loader?minimize" // translates CSS into CommonJS
           },
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
             options: {
               plugins: [autoprefixer(), pxtoremSettings()]
             }
           },
           {
-            loader: 'less-loader' // compiles Less to CSS
+            loader: "less-loader" // compiles Less to CSS
           }
         ]
       },
       {
         test: /\.(art|ejs)$/,
-        loader: 'art-template-loader',
+        loader: "art-template-loader",
         options: {
           compileDebug: true
         }
@@ -99,18 +100,25 @@ module.exports = {
   resolve,
   externals: {
     react: {
-      root: 'React',
-      commonjs2: 'react',
-      commonjs: 'react',
-      amd: 'react'
+      root: "React",
+      commonjs2: "react",
+      commonjs: "react",
+      amd: "react"
     },
-    'react-dom': {
-      root: 'ReactDOM',
-      commonjs2: 'react-dom',
-      commonjs: 'react-dom',
-      amd: 'react-dom'
+    "react-dom": {
+      root: "ReactDOM",
+      commonjs2: "react-dom",
+      commonjs: "react-dom",
+      amd: "react-dom"
     }
   },
-  // plugins: [new CleanWebpackPlugin([outputPath])],
+  plugins: [
+    new CleanWebpackPlugin([path.join(output.path)], {
+      root: process.cwd()
+    }),
+    new CopyWebpackPlugin([
+      { context: "src/", from: "**/*", to: path.join(output.path, "es") }
+    ])
+  ],
   devtool
-}
+};

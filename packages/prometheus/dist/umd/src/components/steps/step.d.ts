@@ -27,9 +27,9 @@ declare class Step extends BaseComponent<IStepProps, any> {
         isLast: boolean;
         type: string;
     };
-    readonly classNames: string;
-    readonly hdClassNames: string;
-    readonly ftClassNames: string;
+    get classNames(): string;
+    get hdClassNames(): string;
+    get ftClassNames(): string;
     render(): JSX.Element;
 }
 export default Step;

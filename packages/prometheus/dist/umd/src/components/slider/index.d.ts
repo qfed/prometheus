@@ -32,9 +32,9 @@ export default class Slider extends BaseComponent<ISliderProps, any> {
         isPC: boolean;
     };
     constructor(props: any);
-    readonly percentage: string;
-    readonly range: number;
-    readonly rect: any;
+    get percentage(): string;
+    get range(): number;
+    get rect(): any;
     onTounchMove: (event: any) => void;
     onTouchStart: () => void;
     mousemove: (e: any) => void;

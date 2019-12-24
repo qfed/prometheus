@@ -12,7 +12,7 @@ declare class TabItem extends BaseComponent<ITabItemProps, any> {
         content: string;
         animated: boolean;
     };
-    readonly height: string;
+    get height(): string;
     render(): JSX.Element;
 }
 export default TabItem;

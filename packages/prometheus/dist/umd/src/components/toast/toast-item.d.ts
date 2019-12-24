@@ -26,7 +26,7 @@ export default class ToastItem extends BaseComponent<IToastItemProps, any> {
     };
     private closeTimer;
     constructor(props: any);
-    readonly Icon: JSX.Element;
+    get Icon(): JSX.Element;
     componentDidMount(): void;
     componentWillUnmount(): void;
     close: () => void;

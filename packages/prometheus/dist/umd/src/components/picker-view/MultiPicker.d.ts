@@ -13,10 +13,10 @@ declare const _default: {
         readonly classPrefix: string;
         context: any;
         setState<K extends string | number | symbol>(state: any, callback?: () => void): void;
-        forceUpdate(callBack?: () => void): void;
-        readonly props: Readonly<{
+        forceUpdate(callback?: () => void): void;
+        readonly props: Readonly<MultiPickerProps> & Readonly<{
             children?: React.ReactNode;
-        }> & Readonly<MultiPickerProps>;
+        }>;
         state: Readonly<any>;
         refs: {
             [key: string]: React.ReactInstance;
@@ -43,10 +43,10 @@ declare const _default: {
         readonly classPrefix: string;
         context: any;
         setState<K extends string | number | symbol>(state: any, callback?: () => void): void;
-        forceUpdate(callBack?: () => void): void;
-        readonly props: Readonly<{
+        forceUpdate(callback?: () => void): void;
+        readonly props: Readonly<MultiPickerProps> & Readonly<{
             children?: React.ReactNode;
-        }> & Readonly<MultiPickerProps>;
+        }>;
         state: Readonly<any>;
         refs: {
             [key: string]: React.ReactInstance;

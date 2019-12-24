@@ -69,7 +69,7 @@ export default class Popover extends BaseComponent<IPopoverProps, any> {
         topLeft: string;
         topRight: string;
     };
-    readonly position: {
+    get position(): {
         top: any;
         left: any;
     };

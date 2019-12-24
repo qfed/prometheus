@@ -23,6 +23,6 @@ export default class Icon extends BaseComponent<IIconProps, any> {
         style: {};
         type: string;
     };
-    readonly type: string;
+    get type(): string;
     render(): JSX.Element;
 }

@@ -10,8 +10,8 @@ declare class ToastManager {
     private createToastContainer;
     private _info;
     private _push;
-    max: number;
-    readonly UUID: string;
+    set max(count: number);
+    get UUID(): string;
     /**
      * 组合参数返回 IToastItemProps
      */

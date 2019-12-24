@@ -67,10 +67,10 @@ export default class Input extends BaseComponent<IInputProps, any> {
     constructor(props: IInputProps);
     ref: React.RefObject<HTMLInputElement | HTMLTextAreaElement>;
     static getDerivedStateFromProps(nextProps: IInputProps): {
-        value: React.ReactText;
+        value: string | number;
     };
-    readonly canClearFlag: boolean;
-    readonly curWords: number;
+    get canClearFlag(): boolean;
+    get curWords(): number;
     private handleInputChange;
     /**
      * NOTE 自动聚焦在2种情况下会失效
@@ -82,6 +82,6 @@ export default class Input extends BaseComponent<IInputProps, any> {
     renderParagraph(): JSX.Element;
     clickClearBtn(e: any): void;
     renderInput(): JSX.Element;
-    readonly inputTheme: string;
+    get inputTheme(): string;
     render(): JSX.Element;
 }

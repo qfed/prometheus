@@ -24,9 +24,9 @@ declare class InfiniteScroll extends BaseComponent<IProps, any> {
     componentWillUnmount(): void;
     handleScroll: () => void;
     loadMore(): Promise<void>;
-    readonly scrollTop: number;
-    readonly scrollHeight: number;
-    readonly clientHeight: number;
+    get scrollTop(): number;
+    get scrollHeight(): number;
+    get clientHeight(): number;
     renderFooterComponent(): JSX.Element;
     render(): JSX.Element;
 }

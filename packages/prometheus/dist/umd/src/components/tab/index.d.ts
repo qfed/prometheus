@@ -63,9 +63,10 @@ export default class Tabs extends BaseComponent<ITabProps, ITabState> {
     static Item: typeof TabItem;
     static getDerivedStateFromProps: (nextProps: any, prevState: any) => any;
     state: ITabState;
+    parentBar: any;
     componentDidMount(): void;
-    readonly selectTrueIndex: number;
-    readonly barWidth: number;
+    get selectTrueIndex(): number;
+    get barWidth(): number;
     /**
      * 假设默认显示的tabbar 数量为 n ，那么tabbar下面的滑块为了居中则将整个 tab 分为 2n 份
      * 假设当前selectedIndex 为 m ，那么向左偏移的百分比就为  2m+1/2n
@@ -73,7 +74,7 @@ export default class Tabs extends BaseComponent<ITabProps, ITabState> {
      * |---.---|---.---|---.---|     三个tabbar
      * |---|---|---|---|---|---|     滑块为了居中将tab分成六份
      */
-    readonly barLeft: number;
+    get barLeft(): number;
     onSelected: (index: number, e: any) => void;
     onItemClick: (item: IPoplistItem) => void;
     render(): JSX.Element;

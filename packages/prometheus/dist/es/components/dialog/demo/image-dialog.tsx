@@ -60,7 +60,7 @@ export default class ImageDialog extends React.Component {
           visible={visibleDemo2}
           image={{
             url:
-              'http://img003.qufenqi.com/products/36/85/3685f2b3b9844937b789939840f51c02.png',
+              'http://img003.qufenqi.com/products/38/e7/38e7776ea2645599f4bfaa70ad7106a6.jpg',
             theme: 'icon'
           }}
           mask={mask}
@@ -77,7 +77,7 @@ export default class ImageDialog extends React.Component {
           visible={visibleDemo3}
           image={{
             url:
-              'http://img003.qufenqi.com/products/36/85/3685f2b3b9844937b789939840f51c02.png',
+              'http://img003.qufenqi.com/products/38/e7/38e7776ea2645599f4bfaa70ad7106a6.jpg',
             theme: 'image'
           }}
           mask={mask}
@@ -111,7 +111,7 @@ export default class ImageDialog extends React.Component {
           visible={visibleDemo8}
           image={{
             url:
-              'http://img003.qufenqi.com/products/e4/c7/e4c7b01509e137627b9c539f431dca78.png',
+              'http://img003.qufenqi.com/products/38/e7/38e7776ea2645599f4bfaa70ad7106a6.jpg',
             theme: 'bigImage'
           }}
           hasCloseButton={true}

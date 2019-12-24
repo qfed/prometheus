@@ -16,7 +16,7 @@ module.exports = {
   mode: env,
   output: {
     filename: `prometheus${env === 'production' ? '.min' : ''}.js`,
-    path: path.resolve(__dirname, '..', '..', 'dist', 'umd')
+    path: path.resolve(__dirname, '..', '..', 'dist')
   },
   devtool: env === 'production' ? 'none' : 'source-map',
   isProd() {

@@ -14,6 +14,6 @@ export default class ButtonGroup extends BaseComponent<IButtonGroupProps, any> {
     static getDerivedStateFromProps: (nextProps: any, prevState: any) => any;
     static Item: typeof ButtonItem;
     state: {};
-    readonly MainClassNames: string;
+    get MainClassNames(): string;
     render(): JSX.Element;
 }

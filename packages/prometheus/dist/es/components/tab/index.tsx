@@ -82,6 +82,7 @@ export default class Tabs extends BaseComponent<ITabProps, ITabState> {
     popupList: [],
     selectedIndex: 0,
   }
+  parentBar: any = null
 
   componentDidMount() {
     let selectedIndex = 0
@@ -132,7 +133,7 @@ export default class Tabs extends BaseComponent<ITabProps, ITabState> {
 
   onSelected = (index: number, e: any) => {
     const { onChange, tabs } = this.props
-    const parentBar = this.refs.parentBar as HTMLElement
+    const parentBar = this.parentBar as HTMLElement
 
     if (e.pageX < e.currentTarget.offsetWidth) {
       if (parentBar && (typeof parentBar.scrollTo === 'function')) {
@@ -211,7 +212,7 @@ export default class Tabs extends BaseComponent<ITabProps, ITabState> {
         >
           <div
             className={`${this.classPrefix}tab__bar-content`}
-            ref='parentBar'
+            ref={ref => (this.parentBar = ref)}
           >
             {tabs.map((item, index) => (
               <div

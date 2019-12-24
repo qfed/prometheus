@@ -36,7 +36,7 @@ type ? (type === 1 ? minor++ : patch++) : major++ //eslint-disable-line
 exec('git pull origin master')
 exec('npm run build&npm run build:prod')
 exec('cp -R src dist/es')
-exec('cp .babelrc dist')
+// exec('cp .babelrc dist')
 exec('rm dist/**/*.md')
 // shell.rm('-rf', 'dist/**/demo')
 // 反复执行的时候走到这步的时候已经是clean的了，没有需要提交的内容

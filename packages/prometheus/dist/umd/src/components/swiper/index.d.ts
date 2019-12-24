@@ -1,5 +1,4 @@
 import '../../base';
-import React from 'react';
 import IBaseProps from '../../base/baseProps';
 import SwiperItem from './swiper-item';
 import BaseComponent from '../../base/baseComponent';
@@ -39,7 +38,7 @@ export default class Swiper extends BaseComponent<ISwiperProps, any> {
         len: number;
     };
     constructor(props: any);
-    readonly classNames: string;
+    get classNames(): string;
     /**
      *
      * @param from
@@ -65,15 +64,15 @@ export default class Swiper extends BaseComponent<ISwiperProps, any> {
     onMouseMove: (e: any) => void;
     onMouseUp: (e: any) => void;
     onMouseDown: (event: any) => void;
-    readonly len: any;
-    readonly rect: any;
-    readonly swiperItems: React.ReactChild[];
+    get len(): any;
+    get rect(): any;
+    get swiperItems(): any[];
     /**
      * TODO
      * 1 做一个dot 移动的动画
      * 2 暴露自定义dot
      */
-    readonly swiperDots: React.ReactChild[];
+    get swiperDots(): JSX.Element[];
     componentWillUnmount(): void;
     componentDidMount(): void;
     render(): JSX.Element;

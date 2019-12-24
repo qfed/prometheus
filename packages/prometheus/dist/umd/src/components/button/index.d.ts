@@ -37,7 +37,7 @@ export default class Button extends BaseComponent<IButtonProps, any> {
     state: {
         disabled: boolean;
     };
-    readonly classNames: string;
+    get classNames(): string;
     private onClick;
     loadingRenderFunction(): JSX.Element;
     render(): JSX.Element;

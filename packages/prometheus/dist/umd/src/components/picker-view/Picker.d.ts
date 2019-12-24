@@ -14,10 +14,10 @@ declare const _default: {
         render(): JSX.Element;
         context: any;
         setState<K extends string | number | symbol>(state: any, callback?: () => void): void;
-        forceUpdate(callBack?: () => void): void;
-        readonly props: Readonly<{
+        forceUpdate(callback?: () => void): void;
+        readonly props: Readonly<IPickerProps> & Readonly<{
             children?: React.ReactNode;
-        }> & Readonly<IPickerProps>;
+        }>;
         state: Readonly<any>;
         refs: {
             [key: string]: React.ReactInstance;
@@ -43,10 +43,10 @@ declare const _default: {
         render(): JSX.Element;
         context: any;
         setState<K extends string | number | symbol>(state: any, callback?: () => void): void;
-        forceUpdate(callBack?: () => void): void;
-        readonly props: Readonly<{
+        forceUpdate(callback?: () => void): void;
+        readonly props: Readonly<IPickerProps> & Readonly<{
             children?: React.ReactNode;
-        }> & Readonly<IPickerProps>;
+        }>;
         state: Readonly<any>;
         refs: {
             [key: string]: React.ReactInstance;
