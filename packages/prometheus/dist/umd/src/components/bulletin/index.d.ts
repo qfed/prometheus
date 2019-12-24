@@ -53,10 +53,10 @@ export default class Bulletin extends BaseComponent<IBulletinProps, any> {
     };
     onClose: () => void;
     onClick: () => void;
-    readonly classNames: string;
-    readonly iconClassNames: string;
-    readonly contentClassNames: string;
-    readonly scrollClassNames: string;
-    readonly closeClassNames: string;
+    get classNames(): string;
+    get iconClassNames(): string;
+    get contentClassNames(): string;
+    get scrollClassNames(): string;
+    get closeClassNames(): string;
     render(): JSX.Element;
 }

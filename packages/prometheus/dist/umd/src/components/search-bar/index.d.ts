@@ -49,7 +49,7 @@ export default class SearchBar extends BaseComponent<ISearchBarProps, any> {
         focus: boolean;
     };
     inputRef: any;
-    readonly isFocus: boolean;
+    get isFocus(): boolean;
     onCancel: (event: any) => void;
     onChange: (event: any) => void;
     onFocus: () => void;

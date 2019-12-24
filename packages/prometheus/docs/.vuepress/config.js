@@ -16,7 +16,8 @@ module.exports = {
     nav: [
       { text: "主页", link: "/" },
       { text: "组件", link: "/components/" },
-      { text: "设计规范", link: `${host}/ui` }
+      { text: "设计规范", link: `${host}/ui` },
+      { text: "github", link: ` https://github.com/qfed/prometheus` }
     ],
     sidebar: {
       "/components/": genSidebar()

@@ -144,7 +144,7 @@ export default class DefaultDialog extends React.Component {
             <div className="content__title">标题单行</div>
             <div className="content__wrap">
               <div className="content__wrap__icon">
-                <img src="http://img003.qufenqi.com/products/49/2e/492e5a70b89a60e3bce4217b98ba753b.png" />
+                <img src="http://img003.qufenqi.com/products/38/e7/38e7776ea2645599f4bfaa70ad7106a6.jpg" />
               </div>
               <div className="content__wrap__word">
                 说明当前状态，提示用户解决方案，不超过两行

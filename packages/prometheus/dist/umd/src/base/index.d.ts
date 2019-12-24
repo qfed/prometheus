@@ -1,1 +1,1 @@
-import '@qfe/q-ui/dist/scss/index.scss';
+import '@qfed/prometheus-ui/src/index.scss';

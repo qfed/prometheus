@@ -34,6 +34,6 @@ export default class Password extends BaseComponent<IPasswordProps, any> {
     onInputChange: (event: any) => void;
     onInputKeyDown: (event: any) => void;
     onClick: (event: any) => void;
-    readonly cells: JSX.Element[];
+    get cells(): JSX.Element[];
     render(): JSX.Element;
 }

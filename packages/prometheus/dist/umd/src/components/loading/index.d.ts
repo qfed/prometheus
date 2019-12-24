@@ -29,8 +29,8 @@ export default class Loading extends BaseComponent<ILoadingProps, any> {
     state: {
         disabled: boolean;
     };
-    readonly classNames: string;
-    readonly wrapperClassNames: string;
+    get classNames(): string;
+    get wrapperClassNames(): string;
     _bounceType(): JSX.Element;
     _circleType(): JSX.Element;
     _defaultType(): JSX.Element;

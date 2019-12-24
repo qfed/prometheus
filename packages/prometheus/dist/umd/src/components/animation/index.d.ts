@@ -36,6 +36,6 @@ export default class Animation extends BaseComponent<IAnimationProps, any> {
     onEntered: () => void;
     onExit: () => void;
     onExited: () => void;
-    readonly children: React.ReactNode;
+    get children(): React.ReactNode;
     render(): JSX.Element;
 }

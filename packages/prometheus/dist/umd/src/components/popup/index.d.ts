@@ -28,7 +28,7 @@ export default class Popup extends BaseComponent<IPopupProps, any> {
     };
     bodyDom: any;
     maskRef: any;
-    readonly positionClassnames: string;
+    get positionClassnames(): string;
     componentWillUnmount(): void;
     onClose: () => void;
     onEnter: () => void;

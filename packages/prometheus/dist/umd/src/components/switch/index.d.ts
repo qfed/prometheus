@@ -30,7 +30,7 @@ export default class Switch extends BaseComponent<ISwitchProps, any> {
     state: {
         checked: boolean;
     };
-    readonly classNames: string;
+    get classNames(): string;
     onChange: (event: any) => void;
     render(): JSX.Element;
 }

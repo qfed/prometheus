@@ -38,7 +38,7 @@ export default class Progress extends BaseComponent<IProgressProps, any> {
     private startAddProgress;
     componentDidUpdate(): void;
     componentDidMount(): void;
-    readonly progressPercent: {
+    get progressPercent(): {
         width: string;
     };
     render(): JSX.Element;

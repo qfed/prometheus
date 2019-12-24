@@ -25,7 +25,7 @@ export interface IPickerViewProps extends IBaseProps {
 }
 declare class PickerView extends BaseComponent<IPickerViewProps, any> {
     static Picker: {
-        new (props: Readonly<import("components/picker-view/PickerTypes").IPickerProps>): {
+        new (props: Readonly<import("./PickerTypes").IPickerProps>): {
             select: (value: any, itemHeight: any, scrollTo: any) => void;
             selectByIndex(index: any, itemHeight: any, zscrollTo: any): void;
             computeChildIndex(top: any, itemHeight: any, childrenLength: any): number;
@@ -33,28 +33,28 @@ declare class PickerView extends BaseComponent<IPickerViewProps, any> {
             render(): JSX.Element;
             context: any;
             setState<K extends string | number | symbol>(state: any, callback?: () => void): void;
-            forceUpdate(callBack?: () => void): void;
-            readonly props: Readonly<{
+            forceUpdate(callback?: () => void): void;
+            readonly props: Readonly<import("./PickerTypes").IPickerProps> & Readonly<{
                 children?: React.ReactNode;
-            }> & Readonly<import("components/picker-view/PickerTypes").IPickerProps>;
+            }>;
             state: Readonly<any>;
             refs: {
                 [key: string]: React.ReactInstance;
             };
             componentDidMount?(): void;
-            shouldComponentUpdate?(nextProps: Readonly<import("components/picker-view/PickerTypes").IPickerProps>, nextState: Readonly<any>, nextContext: any): boolean;
+            shouldComponentUpdate?(nextProps: Readonly<import("./PickerTypes").IPickerProps>, nextState: Readonly<any>, nextContext: any): boolean;
             componentWillUnmount?(): void;
             componentDidCatch?(error: Error, errorInfo: React.ErrorInfo): void;
-            getSnapshotBeforeUpdate?(prevProps: Readonly<import("components/picker-view/PickerTypes").IPickerProps>, prevState: Readonly<any>): any;
-            componentDidUpdate?(prevProps: Readonly<import("components/picker-view/PickerTypes").IPickerProps>, prevState: Readonly<any>, snapshot?: any): void;
+            getSnapshotBeforeUpdate?(prevProps: Readonly<import("./PickerTypes").IPickerProps>, prevState: Readonly<any>): any;
+            componentDidUpdate?(prevProps: Readonly<import("./PickerTypes").IPickerProps>, prevState: Readonly<any>, snapshot?: any): void;
             componentWillMount?(): void;
             UNSAFE_componentWillMount?(): void;
-            componentWillReceiveProps?(nextProps: Readonly<import("components/picker-view/PickerTypes").IPickerProps>, nextContext: any): void;
-            UNSAFE_componentWillReceiveProps?(nextProps: Readonly<import("components/picker-view/PickerTypes").IPickerProps>, nextContext: any): void;
-            componentWillUpdate?(nextProps: Readonly<import("components/picker-view/PickerTypes").IPickerProps>, nextState: Readonly<any>, nextContext: any): void;
-            UNSAFE_componentWillUpdate?(nextProps: Readonly<import("components/picker-view/PickerTypes").IPickerProps>, nextState: Readonly<any>, nextContext: any): void;
+            componentWillReceiveProps?(nextProps: Readonly<import("./PickerTypes").IPickerProps>, nextContext: any): void;
+            UNSAFE_componentWillReceiveProps?(nextProps: Readonly<import("./PickerTypes").IPickerProps>, nextContext: any): void;
+            componentWillUpdate?(nextProps: Readonly<import("./PickerTypes").IPickerProps>, nextState: Readonly<any>, nextContext: any): void;
+            UNSAFE_componentWillUpdate?(nextProps: Readonly<import("./PickerTypes").IPickerProps>, nextState: Readonly<any>, nextContext: any): void;
         };
-        new (props: import("components/picker-view/PickerTypes").IPickerProps, context?: any): {
+        new (props: import("./PickerTypes").IPickerProps, context?: any): {
             select: (value: any, itemHeight: any, scrollTo: any) => void;
             selectByIndex(index: any, itemHeight: any, zscrollTo: any): void;
             computeChildIndex(top: any, itemHeight: any, childrenLength: any): number;
@@ -62,32 +62,32 @@ declare class PickerView extends BaseComponent<IPickerViewProps, any> {
             render(): JSX.Element;
             context: any;
             setState<K extends string | number | symbol>(state: any, callback?: () => void): void;
-            forceUpdate(callBack?: () => void): void;
-            readonly props: Readonly<{
+            forceUpdate(callback?: () => void): void;
+            readonly props: Readonly<import("./PickerTypes").IPickerProps> & Readonly<{
                 children?: React.ReactNode;
-            }> & Readonly<import("components/picker-view/PickerTypes").IPickerProps>;
+            }>;
             state: Readonly<any>;
             refs: {
                 [key: string]: React.ReactInstance;
             };
             componentDidMount?(): void;
-            shouldComponentUpdate?(nextProps: Readonly<import("components/picker-view/PickerTypes").IPickerProps>, nextState: Readonly<any>, nextContext: any): boolean;
+            shouldComponentUpdate?(nextProps: Readonly<import("./PickerTypes").IPickerProps>, nextState: Readonly<any>, nextContext: any): boolean;
             componentWillUnmount?(): void;
             componentDidCatch?(error: Error, errorInfo: React.ErrorInfo): void;
-            getSnapshotBeforeUpdate?(prevProps: Readonly<import("components/picker-view/PickerTypes").IPickerProps>, prevState: Readonly<any>): any;
-            componentDidUpdate?(prevProps: Readonly<import("components/picker-view/PickerTypes").IPickerProps>, prevState: Readonly<any>, snapshot?: any): void;
+            getSnapshotBeforeUpdate?(prevProps: Readonly<import("./PickerTypes").IPickerProps>, prevState: Readonly<any>): any;
+            componentDidUpdate?(prevProps: Readonly<import("./PickerTypes").IPickerProps>, prevState: Readonly<any>, snapshot?: any): void;
             componentWillMount?(): void;
             UNSAFE_componentWillMount?(): void;
-            componentWillReceiveProps?(nextProps: Readonly<import("components/picker-view/PickerTypes").IPickerProps>, nextContext: any): void;
-            UNSAFE_componentWillReceiveProps?(nextProps: Readonly<import("components/picker-view/PickerTypes").IPickerProps>, nextContext: any): void;
-            componentWillUpdate?(nextProps: Readonly<import("components/picker-view/PickerTypes").IPickerProps>, nextState: Readonly<any>, nextContext: any): void;
-            UNSAFE_componentWillUpdate?(nextProps: Readonly<import("components/picker-view/PickerTypes").IPickerProps>, nextState: Readonly<any>, nextContext: any): void;
+            componentWillReceiveProps?(nextProps: Readonly<import("./PickerTypes").IPickerProps>, nextContext: any): void;
+            UNSAFE_componentWillReceiveProps?(nextProps: Readonly<import("./PickerTypes").IPickerProps>, nextContext: any): void;
+            componentWillUpdate?(nextProps: Readonly<import("./PickerTypes").IPickerProps>, nextState: Readonly<any>, nextContext: any): void;
+            UNSAFE_componentWillUpdate?(nextProps: Readonly<import("./PickerTypes").IPickerProps>, nextState: Readonly<any>, nextContext: any): void;
         };
         Item: any;
         contextType?: React.Context<any>;
     };
     static MultiPicker: {
-        new (props: Readonly<import("components/picker-view/MultiPickerProps").default>): {
+        new (props: Readonly<import("./MultiPickerProps").default>): {
             getValue: () => any[];
             onChange: (i: any, v: any, cb: any) => void;
             onValueChange: (i: any, v: any) => void;
@@ -96,28 +96,28 @@ declare class PickerView extends BaseComponent<IPickerViewProps, any> {
             readonly classPrefix: string;
             context: any;
             setState<K extends string | number | symbol>(state: any, callback?: () => void): void;
-            forceUpdate(callBack?: () => void): void;
-            readonly props: Readonly<{
+            forceUpdate(callback?: () => void): void;
+            readonly props: Readonly<import("./MultiPickerProps").default> & Readonly<{
                 children?: React.ReactNode;
-            }> & Readonly<import("components/picker-view/MultiPickerProps").default>;
+            }>;
             state: Readonly<any>;
             refs: {
                 [key: string]: React.ReactInstance;
             };
             componentDidMount?(): void;
-            shouldComponentUpdate?(nextProps: Readonly<import("components/picker-view/MultiPickerProps").default>, nextState: Readonly<any>, nextContext: any): boolean;
+            shouldComponentUpdate?(nextProps: Readonly<import("./MultiPickerProps").default>, nextState: Readonly<any>, nextContext: any): boolean;
             componentWillUnmount?(): void;
             componentDidCatch?(error: Error, errorInfo: React.ErrorInfo): void;
-            getSnapshotBeforeUpdate?(prevProps: Readonly<import("components/picker-view/MultiPickerProps").default>, prevState: Readonly<any>): any;
-            componentDidUpdate?(prevProps: Readonly<import("components/picker-view/MultiPickerProps").default>, prevState: Readonly<any>, snapshot?: any): void;
+            getSnapshotBeforeUpdate?(prevProps: Readonly<import("./MultiPickerProps").default>, prevState: Readonly<any>): any;
+            componentDidUpdate?(prevProps: Readonly<import("./MultiPickerProps").default>, prevState: Readonly<any>, snapshot?: any): void;
             componentWillMount?(): void;
             UNSAFE_componentWillMount?(): void;
-            componentWillReceiveProps?(nextProps: Readonly<import("components/picker-view/MultiPickerProps").default>, nextContext: any): void;
-            UNSAFE_componentWillReceiveProps?(nextProps: Readonly<import("components/picker-view/MultiPickerProps").default>, nextContext: any): void;
-            componentWillUpdate?(nextProps: Readonly<import("components/picker-view/MultiPickerProps").default>, nextState: Readonly<any>, nextContext: any): void;
-            UNSAFE_componentWillUpdate?(nextProps: Readonly<import("components/picker-view/MultiPickerProps").default>, nextState: Readonly<any>, nextContext: any): void;
+            componentWillReceiveProps?(nextProps: Readonly<import("./MultiPickerProps").default>, nextContext: any): void;
+            UNSAFE_componentWillReceiveProps?(nextProps: Readonly<import("./MultiPickerProps").default>, nextContext: any): void;
+            componentWillUpdate?(nextProps: Readonly<import("./MultiPickerProps").default>, nextState: Readonly<any>, nextContext: any): void;
+            UNSAFE_componentWillUpdate?(nextProps: Readonly<import("./MultiPickerProps").default>, nextState: Readonly<any>, nextContext: any): void;
         };
-        new (props: import("components/picker-view/MultiPickerProps").default, context?: any): {
+        new (props: import("./MultiPickerProps").default, context?: any): {
             getValue: () => any[];
             onChange: (i: any, v: any, cb: any) => void;
             onValueChange: (i: any, v: any) => void;
@@ -126,26 +126,26 @@ declare class PickerView extends BaseComponent<IPickerViewProps, any> {
             readonly classPrefix: string;
             context: any;
             setState<K extends string | number | symbol>(state: any, callback?: () => void): void;
-            forceUpdate(callBack?: () => void): void;
-            readonly props: Readonly<{
+            forceUpdate(callback?: () => void): void;
+            readonly props: Readonly<import("./MultiPickerProps").default> & Readonly<{
                 children?: React.ReactNode;
-            }> & Readonly<import("components/picker-view/MultiPickerProps").default>;
+            }>;
             state: Readonly<any>;
             refs: {
                 [key: string]: React.ReactInstance;
             };
             componentDidMount?(): void;
-            shouldComponentUpdate?(nextProps: Readonly<import("components/picker-view/MultiPickerProps").default>, nextState: Readonly<any>, nextContext: any): boolean;
+            shouldComponentUpdate?(nextProps: Readonly<import("./MultiPickerProps").default>, nextState: Readonly<any>, nextContext: any): boolean;
             componentWillUnmount?(): void;
             componentDidCatch?(error: Error, errorInfo: React.ErrorInfo): void;
-            getSnapshotBeforeUpdate?(prevProps: Readonly<import("components/picker-view/MultiPickerProps").default>, prevState: Readonly<any>): any;
-            componentDidUpdate?(prevProps: Readonly<import("components/picker-view/MultiPickerProps").default>, prevState: Readonly<any>, snapshot?: any): void;
+            getSnapshotBeforeUpdate?(prevProps: Readonly<import("./MultiPickerProps").default>, prevState: Readonly<any>): any;
+            componentDidUpdate?(prevProps: Readonly<import("./MultiPickerProps").default>, prevState: Readonly<any>, snapshot?: any): void;
             componentWillMount?(): void;
             UNSAFE_componentWillMount?(): void;
-            componentWillReceiveProps?(nextProps: Readonly<import("components/picker-view/MultiPickerProps").default>, nextContext: any): void;
-            UNSAFE_componentWillReceiveProps?(nextProps: Readonly<import("components/picker-view/MultiPickerProps").default>, nextContext: any): void;
-            componentWillUpdate?(nextProps: Readonly<import("components/picker-view/MultiPickerProps").default>, nextState: Readonly<any>, nextContext: any): void;
-            UNSAFE_componentWillUpdate?(nextProps: Readonly<import("components/picker-view/MultiPickerProps").default>, nextState: Readonly<any>, nextContext: any): void;
+            componentWillReceiveProps?(nextProps: Readonly<import("./MultiPickerProps").default>, nextContext: any): void;
+            UNSAFE_componentWillReceiveProps?(nextProps: Readonly<import("./MultiPickerProps").default>, nextContext: any): void;
+            componentWillUpdate?(nextProps: Readonly<import("./MultiPickerProps").default>, nextState: Readonly<any>, nextContext: any): void;
+            UNSAFE_componentWillUpdate?(nextProps: Readonly<import("./MultiPickerProps").default>, nextState: Readonly<any>, nextContext: any): void;
         };
         defaultProps: {
             prefixCls: string;

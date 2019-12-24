@@ -16,6 +16,7 @@
     "deploy:demo": "cross-env NODE_ENV=production webpack --config webpack/webpack.dev.js",
     "build": "cross-env NODE_ENV=development node bin/build.js",
     "build:prod": "cross-env NODE_ENV=production node bin/build.js",
+    "prepublish": "build:prod",
     "vendor": "webpack --config webpack/webpack.vendor.js",
     "test": "webpack-dev-server  --config webpack/webpack.dev.js  --host 10.11.8.163",
     "parallel": "parallel-webpack --config=webpack/webpack.parallel.js --watch --no-stats",
@@ -25,7 +26,9 @@
   "author": "",
   "license": "ISC",
   "files": [
-    "dist/"
+    "dist/",
+    "package.json",
+    "README.md"
   ],
   "nodemonConfig": {
     "watch": [
@@ -64,11 +67,10 @@
     "autoprefixer": "^9.4.3",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.0",
-    "cache-loader": "^2.0.0",
     "chalk": "^2.4.1",
     "chokidar": "^2.0.4",
     "clean-webpack-plugin": "^0.1.19",
-    "copy-webpack-plugin": "^4.6.0",
+    "copy-webpack-plugin": "^5.1.1",
     "cross-env": "^5.2.0",
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",

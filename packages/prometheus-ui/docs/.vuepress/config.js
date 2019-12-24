@@ -28,7 +28,7 @@ module.exports = {
       { text: '主页', link: '/' },
       { text: '设计', link: '/guide/' },
       { text: '组件', link: '/components/' },
-      { text: 'prometheus', link: `${host}/react`},
+      { text: 'prometheus', link: `${host}`},
     ],
     sidebar: {
       '/components/': genSidebar()
