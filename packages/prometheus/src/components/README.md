@@ -17,7 +17,7 @@ $ npm run build // 编译产出 q-react.js
 - 组件的`export default` 为`ComponentName`Pascal 规则,另一个`export`  为 react 组件 props 接口 `I[ComponentName]Props`
 
 ```jsx
-import '../../base'
+
 import React from 'react'
 
 export interface IButtonProps {

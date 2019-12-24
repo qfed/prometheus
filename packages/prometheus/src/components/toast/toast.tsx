@@ -1,4 +1,4 @@
-import '../../base'
+
 import React from 'react'
 
 import ToastItem, { IToastItemProps } from './toast-item'

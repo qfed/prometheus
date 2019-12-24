@@ -1,4 +1,4 @@
-import '../../base'
+
 import observerProps from '../../base/observerProps'
 import React from 'react'
 import ButtonItem from './index'

@@ -1,4 +1,4 @@
-import '../../base'
+
 import React from 'react'
 import { observer } from '../../base/observerProps'
 import IBaseProps from '../../base/baseProps'

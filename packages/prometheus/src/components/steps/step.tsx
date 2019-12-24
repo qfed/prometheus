@@ -1,4 +1,4 @@
-import '../../base'
+
 import React from 'react'
 // import Steps from "./index"
 import Icon from '../icon'

@@ -1,4 +1,4 @@
-import '../../base'
+
 import * as React from 'react'
 import IBaseProps from '../../base/baseProps'
 import BaseComponent from '../../base/baseComponent'

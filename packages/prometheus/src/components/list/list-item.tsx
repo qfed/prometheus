@@ -1,7 +1,7 @@
 import classnames from 'classnames'
 import React from 'react'
 import createDebug from '../../base/createDebug'
-import '../../base'
+
 import observerProps from '../../base/observerProps'
 import IBaseProps from '../../base/baseProps'
 import BaseComponent from '../../base/baseComponent'

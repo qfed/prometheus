@@ -2,7 +2,6 @@ const path = require("path");
 const glob = require("glob");
 const webpack = require("webpack");
 const pxtowhatever = require("pxtowhatever");
-
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const getHtmlPlugins = require("./config/getHtmlPlugins");
@@ -32,7 +31,7 @@ const entryArray = glob.sync(componentsMatch).map(filePath => {
 const entryStr = "{" + entryArray.reduce((x, y) => `${x},${y}`) + "}"; //eslint-disable-line
 // console.dir(entryStr)
 module.exports = {
-  entry: JSON.parse(entryStr),
+  entry: { ...JSON.parse(entryStr), ui: "./src/base/index.ts" },
   mode: isProd() ? "production" : "development",
   output: {
     filename: "[name]/[name].js",

@@ -1,4 +1,4 @@
-import '../../base'
+
 import React from 'react'
 import observerProps, { observer } from '../../base/observerProps'
 import classNames from 'classnames'

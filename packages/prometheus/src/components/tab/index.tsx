@@ -1,4 +1,4 @@
-import '../../base'
+
 import React from 'react'
 import createDebug from '../../base/createDebug'
 import classNames from 'classnames'

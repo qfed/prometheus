@@ -1,4 +1,4 @@
-import '../../base'
+
 import BaseProps from '../../base/baseProps'
 import React from 'react'
 import classNames from 'classnames'
