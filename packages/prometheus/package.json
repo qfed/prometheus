@@ -1,6 +1,6 @@
 {
   "name": "@qfed/prometheus",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "q-react",
   "main": "dist/umd/prometheus.js",
   "module": "dist/es/index.ts",
@@ -57,7 +57,7 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime-corejs3": "^7.0.0",
-    "@qfed/prometheus-ui": "^0.0.1",
+    "@qfed/prometheus-ui": "^0.0.2",
     "@types/classnames": "^2.2.6",
     "@types/debug": "^0.0.31",
     "@types/react": "^16.7.17",
