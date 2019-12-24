@@ -1,32 +1,7 @@
-// @import statements may be treated differently by Less depending on the file extension:
-
-// If the file has a .css extension it will be treated as CSS and the @import statement left as-is (see the inline option below).
-// If it has any other extension it will be treated as Less and imported.
-// If it does not have an extension,  will be appended and it will be included as a imported Less file.
-// Examples:
-
-// @import "foo";      // foo is imported
-// @import "foo"; // foo is imported
-// @import "foo.php";  // foo.php imported as a less file
-// @import "foo.css";  // statement left in place, as-is
-
 // ## variable
 
 @import 'theme/var';
 
-// ## mixin
-//  @import "mixin/setOnepx";
-
-// ## common
-
 @import 'normalize';
 
-// ## tools
-
-//  @import "utilities";
-
-// ### layout
-
 @import 'scaffolding';
-@import 'type';
-// @import './font/iconfont.scss';
