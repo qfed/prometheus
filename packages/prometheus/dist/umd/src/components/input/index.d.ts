@@ -67,7 +67,7 @@ export default class Input extends BaseComponent<IInputProps, any> {
     constructor(props: IInputProps);
     ref: React.RefObject<HTMLInputElement | HTMLTextAreaElement>;
     static getDerivedStateFromProps(nextProps: IInputProps): {
-        value: string | number;
+        value: React.ReactText;
     };
     get canClearFlag(): boolean;
     get curWords(): number;
