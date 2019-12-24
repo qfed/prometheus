@@ -1,6 +1,6 @@
 {
   "name": "@qfed/prometheus",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "q-react",
   "main": "dist/umd/prometheus.js",
   "module": "dist/es/index.ts",
@@ -38,7 +38,7 @@
     ]
   },
   "dependencies": {
-    "@qfed/prometheus-ui": "^0.0.4",
+    "@qfed/prometheus-ui": "^0.0.5",
     "classnames": "^2.2.6",
     "core-decorators": "^0.20.0",
     "react-transition-group": "^2.6.0"
