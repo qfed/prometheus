@@ -19,6 +19,7 @@
     "build": "cross-env NODE_ENV=development node bin/build.js && cross-env NODE_ENV=development gulp",
     "build:prod": "cross-env NODE_ENV=development node bin/build.js && cross-env NODE_ENV=production gulp",
     "dev": "nodemon ./node_modules/.bin/gulp start",
+    "prepublish": "npm run build:prod",
     "start": "gulp start --silent",
     "theme": "npm run build:prod   && git add .&& git commit -m \"update dist\" &&  git push && cd ../q-react &&yarn add git+ssh://git@git.qufenqi.com:fe/q-ui.git#fix_input-style -D && cd ../q-ui"
   },
