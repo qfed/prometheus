@@ -12,7 +12,7 @@ prometheus-ui 是一个样式库就像 bootstrap or we-ui 一样，只不过 q-u
 
 现在我们日常开发中都会基于 react angular vue 之类的框架开发并不直接操作 DOM，所以我们要对 q-ui 进行二次封装，此时要做的事就是用对应的框架渲染出指定的 DOM 结构
 
-- `q-ui`规划了样式
+- `prometheus-ui`规划了样式
 
 ```less
 .q-button {
@@ -26,14 +26,14 @@ prometheus-ui 是一个样式库就像 bootstrap or we-ui 一样，只不过 q-u
 }
 ```
 
-- `q-ui`的产出为 DOM
+- `prometheus-ui`的产出为 DOM
 
 ```html
 <button class="q-button q-button--default"></button>
 <button class="q-button q-button--brand"></button>
 ```
 
-- `q-ui`的结合应用框架的二次封装
+- `prometheus`的结合应用框架的二次封装
 
 ```jsx
 class Button extends React.Component {

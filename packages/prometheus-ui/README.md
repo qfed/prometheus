@@ -209,17 +209,3 @@ q-ui 的组件样式书写方式基本可以总结为一句话， 严格执行
 ```
 
 - 上诉所有样式推荐规则都不是绝对的，做规则的主人，你掌控规则，而不是规则掌控你
-
-## eslint & code format
-
-VSCode 有一个叫 Prettier - Code formatter 的插件 里面有一个参数 Prettier.eslintIntegration 开启的话可以根据 ESLint 的配置 来格式代码
-但是有的时候也会有支持的问题，如果某个规则无法自动支持，简单阅读一下规则如果无关紧要就把对应规则注释掉。
-
-## 端口号
-
-如果端口被占用则+1
-
-- 3000 browsersync
-- 3001 browsersync console
-- 3002 vuepress hot
-- 3003 vuepress koa-static
